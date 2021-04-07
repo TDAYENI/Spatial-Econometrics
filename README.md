@@ -2,7 +2,7 @@
 
 A collaborative report written in R as part of the Spatial Analysis and Geocomputation module during my Geospatial Sciences, GIS and Computing MSc (Distinction, 82%). The report compares five spatial regression models predictive power in determining green space in London: Spatial Lag, Spatial Error, Spatial Durbin, Geographically Weighted Regression (GWR) and Linear Regression with Spatial Filtering. 
 
-[Link to the Report](https://tdayeni.github.io/Spatial-Econometrics/)
+[Link to the Report (HTML)](https://tdayeni.github.io/Spatial-Econometrics/)
 
 ## Example of Results and Visualisations
 Percentage Green Space per Ward in Greater London             |  Correlation Matrix for Dependent Variables
