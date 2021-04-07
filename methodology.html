@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Methodology | Modelling correlation between access to green space and demographic and health variables in London.</title>
+  <meta name="description" content="Chapter 4 Methodology | Modelling correlation between access to green space and demographic and health variables in London." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Methodology | Modelling correlation between access to green space and demographic and health variables in London." />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Methodology | Modelling correlation between access to green space and demographic and health variables in London." />
+  
+  
+  
+
+<meta name="author" content="Titilayo Ayeni, Shenzhangyin Yang, Niamh French, James Edwards" />
+
+
+<meta name="date" content="2021-01-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="exploratory-spatial-data-analysis.html"/>
+<link rel="next" href="results.html"/>
+<script src="libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+CEGE0097 Group Coursework
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="data-description.html"><a href="data-description.html"><i class="fa fa-check"></i><b>2</b> Data Description</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="data-description.html"><a href="data-description.html#green-space-data"><i class="fa fa-check"></i><b>2.1</b> Green Space Data</a></li>
+<li class="chapter" data-level="2.2" data-path="data-description.html"><a href="data-description.html#demographic-data"><i class="fa fa-check"></i><b>2.2</b> Demographic Data</a></li>
+<li class="chapter" data-level="2.3" data-path="data-description.html"><a href="data-description.html#data-multicollinearity"><i class="fa fa-check"></i><b>2.3</b> Data Multicollinearity</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html"><i class="fa fa-check"></i><b>3</b> Exploratory Spatial Data Analysis</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#london-greenspace-distribution"><i class="fa fa-check"></i><b>3.1</b> London Greenspace distribution</a></li>
+<li class="chapter" data-level="3.2" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#demographic-distribution-across-london"><i class="fa fa-check"></i><b>3.2</b> Demographic distribution across London</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#income"><i class="fa fa-check"></i><b>3.2.1</b> Income</a></li>
+<li class="chapter" data-level="3.2.2" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#age"><i class="fa fa-check"></i><b>3.2.2</b> Age</a></li>
+<li class="chapter" data-level="3.2.3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#life-expectancy"><i class="fa fa-check"></i><b>3.2.3</b> Life Expectancy</a></li>
+<li class="chapter" data-level="3.2.4" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#ethnicity"><i class="fa fa-check"></i><b>3.2.4</b> Ethnicity</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#spatial-autocorrelation"><i class="fa fa-check"></i><b>3.3</b> Spatial Autocorrelation</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#global-morans-i"><i class="fa fa-check"></i><b>3.3.1</b> Global Moran’s I</a></li>
+<li class="chapter" data-level="3.3.2" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#local-morans-i"><i class="fa fa-check"></i><b>3.3.2</b> Local Moran’s I</a></li>
+<li class="chapter" data-level="3.3.3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#semivariogram"><i class="fa fa-check"></i><b>3.3.3</b> Semivariogram</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="methodology.html"><a href="methodology.html"><i class="fa fa-check"></i><b>4</b> Methodology</a></li>
+<li class="chapter" data-level="5" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>5</b> Results</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="results.html"><a href="results.html#ols"><i class="fa fa-check"></i><b>5.1</b> OLS</a></li>
+<li class="chapter" data-level="5.2" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.2</b> Shapiro-Wilk Normality Test</a></li>
+<li class="chapter" data-level="5.3" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.3</b> Moran’s I on OLS residuals</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="results.html"><a href="results.html#south"><i class="fa fa-check"></i><b>5.3.1</b> South</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="results.html"><a href="results.html#lagrange-multiplier-tests"><i class="fa fa-check"></i><b>5.4</b> Lagrange Multiplier Tests</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="results.html"><a href="results.html#london"><i class="fa fa-check"></i><b>5.4.1</b> London</a></li>
+<li class="chapter" data-level="5.4.2" data-path="results.html"><a href="results.html#north"><i class="fa fa-check"></i><b>5.4.2</b> North</a></li>
+<li class="chapter" data-level="5.4.3" data-path="results.html"><a href="results.html#east-and-west"><i class="fa fa-check"></i><b>5.4.3</b> East and West</a></li>
+<li class="chapter" data-level="5.4.4" data-path="results.html"><a href="results.html#south-1"><i class="fa fa-check"></i><b>5.4.4</b> South</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5</b> Spatial Regression Models</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.1</b> Spatial Lag Model</a></li>
+<li class="chapter" data-level="5.5.2" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.2</b> Spatial Error Model</a></li>
+<li class="chapter" data-level="5.5.3" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.3</b> Spatial Durbin</a></li>
+<li class="chapter" data-level="5.5.4" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.4</b> GWR</a></li>
+<li class="chapter" data-level="5.5.5" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.5</b> OLS and Spatial Filtering</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html"><i class="fa fa-check"></i><b>6</b> Discussion and Conclusions</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#model-selection"><i class="fa fa-check"></i><b>6.1</b> Model Selection</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#greater-london"><i class="fa fa-check"></i><b>6.1.1</b> Greater London</a></li>
+<li class="chapter" data-level="6.1.2" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#north-london"><i class="fa fa-check"></i><b>6.1.2</b> North London</a></li>
+<li class="chapter" data-level="6.1.3" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#east-london"><i class="fa fa-check"></i><b>6.1.3</b> East London</a></li>
+<li class="chapter" data-level="6.1.4" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#west-london"><i class="fa fa-check"></i><b>6.1.4</b> West London</a></li>
+<li class="chapter" data-level="6.1.5" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#south-london"><i class="fa fa-check"></i><b>6.1.5</b> South London</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#limitations-and-future-work"><i class="fa fa-check"></i><b>6.2</b> Limitations and future work</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i><b>7</b> Appendix</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="appendix.html"><a href="appendix.html#ordinary-least-squares-ols-results"><i class="fa fa-check"></i><b>7.1</b> Ordinary Least Squares (OLS) Results</a></li>
+<li class="chapter" data-level="7.2" data-path="appendix.html"><a href="appendix.html#spatial-lag-results"><i class="fa fa-check"></i><b>7.2</b> Spatial Lag Results</a></li>
+<li class="chapter" data-level="7.3" data-path="appendix.html"><a href="appendix.html#spatial-error-results"><i class="fa fa-check"></i><b>7.3</b> Spatial Error Results</a></li>
+<li class="chapter" data-level="7.4" data-path="appendix.html"><a href="appendix.html#spatial-durbin-results"><i class="fa fa-check"></i><b>7.4</b> Spatial Durbin Results</a></li>
+<li class="chapter" data-level="7.5" data-path="appendix.html"><a href="appendix.html#geographically-weighted-regression-results"><i class="fa fa-check"></i><b>7.5</b> Geographically Weighted Regression Results</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="appendix.html"><a href="appendix.html#shapiro-wilk-normality-tests-before-normalisation"><i class="fa fa-check"></i><b>7.5.1</b> Shapiro-Wilk Normality Tests before normalisation</a></li>
+<li class="chapter" data-level="7.5.2" data-path="appendix.html"><a href="appendix.html#shapiro-wilk-normality-test-after-normalisation"><i class="fa fa-check"></i><b>7.5.2</b> Shapiro-Wilk Normality Test after normalisation</a></li>
+<li class="chapter" data-level="7.5.3" data-path="appendix.html"><a href="appendix.html#shapiro-wlike-normality-test-for-ols-residuals"><i class="fa fa-check"></i><b>7.5.3</b> Shapiro-Wlike Normality Test for OLS Residuals</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="appendix.html"><a href="appendix.html#ols-with-spatial-filtering-results"><i class="fa fa-check"></i><b>7.6</b> OLS with Spatial Filtering Results</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="appendix.html"><a href="appendix.html#lagrange-multiplier-diagnostics-for-spatial-dependence"><i class="fa fa-check"></i><b>7.6.1</b> Lagrange Multiplier Diagnostics for Spatial Dependence</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>8</b> References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Modelling correlation between access to green space and demographic and health variables in London.</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="methodology" class="section level1" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Methodology</h1>
+<div class="figure">
+<img src="AED.png" alt="" />
+<p class="caption">Figure 4.1 The analyse, evaluate, decision-making approach used for our study.</p>
+</div>
+<p>A literature review was completed in order to gain domain knowledge for the study, establish gaps in the literature and understand the methods used by other researchers for analysing variations in access to green space. From this appropriate methods and variables were established. Data was sourced with careful consideration to reliability and completeness. Exploratory analysis was performed on this data, and variables were normalised where required. Tests for local and global spatial autocorrelation were performed to establish whether spatial regression models would be required; these included Global and Local Moran’s I, and Getis and Ord’s Gi and Gi*. Spatial autocorrelation can be described as the extent to which attributes of objects are significantly clustered spatially, which can result in the possibility of underestimating errors and overestimating the statistical significance of regression coefficients in a model (<span class="citation"><a href="references.html#ref-haining_spatial_2003-1" role="doc-biblioref">Haining</a> (<a href="references.html#ref-haining_spatial_2003-1" role="doc-biblioref">2003</a>)</span>). Testing and modelling were performed on Greater London and sub-sections of London to understand variation in results in different areas and at different scales.</p>
+<p>An Ordinary Least Squares (OLS) multiple linear regression model was the first model created. The residuals of this model were examined for spatial autocorrelation using Lagrange Multiplier tests and Moran’s I. The results of these tests guided the procedure for model testing and selection. After each stage of modelling the results were analysed and evaluated before deciding whether further modelling was required, this procedure is illustrated in Figure 4.1. Even with this guidance, all models for each study area and dataset were run to provide supporting evidence for model selection and highlight a model’s unsuitability. The spatial models were tested in the order Spatial Lag, Spatial Error, Spatial Durbin, Geographically Weighted Regression, OLS with Spatial Filtering. Finally, the most suitable model for each study area was chosen.</p>
+<p>The spatial lag model takes significant autocorrelation in the dependent variable as the assumption but may also take varying spatial scales in the data into account (<span class="citation"><a href="references.html#ref-chi_spatial_2008" role="doc-biblioref">Chi and Zhu</a> (<a href="references.html#ref-chi_spatial_2008" role="doc-biblioref">2008</a>)</span>). On the contrary, the spatial error model suggests spatial autocorrelation in errors, as a result of key independent variables that have not been included in the model. The third spatial regression model used was the Spatial Durbin model, which implies that autocorrelation may be present in one or more independent variables, as well as the dependent variable. A Geographically Weighted Regression (GWR) model allows for the model to vary over space, by passing a search window from a multitude of points in the study area and fitting a distance weighted regression model each time (<span class="citation"><a href="references.html#ref-brunsdon_geographical_2008" role="doc-biblioref">Brunsdon</a> (<a href="references.html#ref-brunsdon_geographical_2008" role="doc-biblioref">2008</a>)</span>). A benefit of the GWR over more basic spatial regression models is that it accounts for spatial heterogeneity, which can be particularly important to represent parts of London that are on the boundaries of wards, for example.</p>
+<p>The OLS with Spatial Filtering model uses Eigenvector Spatial Filtering Regression (ESFR) to explain the underlying spatial processes in the regression model and account for the autocorrelation present. The spatial filter is included into the OLS regression model to represent spatial autocorrelation as a synthetic variable obtained from a linear combination of selected spatial weight matrix eigenvectors (<span class="citation"><a href="references.html#ref-griffith_non-standard_2011" role="doc-biblioref">Griffith and Paelinck</a> (<a href="references.html#ref-griffith_non-standard_2011" role="doc-biblioref">2011</a>)</span>). The eigenvectors in a linear format allow for the filtering of spatial autocorrelation in the regression residuals, as well as increased model accuracy and reduced uncertainty as each eigenvector is uncorrelated with each other (<span class="citation"><a href="references.html#ref-getis_comparative_2002" role="doc-biblioref">Getis and Griffith</a> (<a href="references.html#ref-getis_comparative_2002" role="doc-biblioref">2002</a>)</span>).</p>
+<p>The study was completed using the R programming language within the RStudio application, enabling the incorporation of tools to compute our results and display them in graphical form. The codes used have been stored for reproducibility.</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="exploratory-spatial-data-analysis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="results.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["group_5_report_bookdown.pdf", "group_5_report_bookdown.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

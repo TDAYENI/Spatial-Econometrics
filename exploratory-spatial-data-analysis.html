@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Exploratory Spatial Data Analysis | Modelling correlation between access to green space and demographic and health variables in London.</title>
+  <meta name="description" content="Chapter 3 Exploratory Spatial Data Analysis | Modelling correlation between access to green space and demographic and health variables in London." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Exploratory Spatial Data Analysis | Modelling correlation between access to green space and demographic and health variables in London." />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Exploratory Spatial Data Analysis | Modelling correlation between access to green space and demographic and health variables in London." />
+  
+  
+  
+
+<meta name="author" content="Titilayo Ayeni, Shenzhangyin Yang, Niamh French, James Edwards" />
+
+
+<meta name="date" content="2021-01-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="data-description.html"/>
+<link rel="next" href="methodology.html"/>
+<script src="libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+CEGE0097 Group Coursework
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="data-description.html"><a href="data-description.html"><i class="fa fa-check"></i><b>2</b> Data Description</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="data-description.html"><a href="data-description.html#green-space-data"><i class="fa fa-check"></i><b>2.1</b> Green Space Data</a></li>
+<li class="chapter" data-level="2.2" data-path="data-description.html"><a href="data-description.html#demographic-data"><i class="fa fa-check"></i><b>2.2</b> Demographic Data</a></li>
+<li class="chapter" data-level="2.3" data-path="data-description.html"><a href="data-description.html#data-multicollinearity"><i class="fa fa-check"></i><b>2.3</b> Data Multicollinearity</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html"><i class="fa fa-check"></i><b>3</b> Exploratory Spatial Data Analysis</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#london-greenspace-distribution"><i class="fa fa-check"></i><b>3.1</b> London Greenspace distribution</a></li>
+<li class="chapter" data-level="3.2" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#demographic-distribution-across-london"><i class="fa fa-check"></i><b>3.2</b> Demographic distribution across London</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#income"><i class="fa fa-check"></i><b>3.2.1</b> Income</a></li>
+<li class="chapter" data-level="3.2.2" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#age"><i class="fa fa-check"></i><b>3.2.2</b> Age</a></li>
+<li class="chapter" data-level="3.2.3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#life-expectancy"><i class="fa fa-check"></i><b>3.2.3</b> Life Expectancy</a></li>
+<li class="chapter" data-level="3.2.4" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#ethnicity"><i class="fa fa-check"></i><b>3.2.4</b> Ethnicity</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#spatial-autocorrelation"><i class="fa fa-check"></i><b>3.3</b> Spatial Autocorrelation</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#global-morans-i"><i class="fa fa-check"></i><b>3.3.1</b> Global Moran’s I</a></li>
+<li class="chapter" data-level="3.3.2" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#local-morans-i"><i class="fa fa-check"></i><b>3.3.2</b> Local Moran’s I</a></li>
+<li class="chapter" data-level="3.3.3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#semivariogram"><i class="fa fa-check"></i><b>3.3.3</b> Semivariogram</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="methodology.html"><a href="methodology.html"><i class="fa fa-check"></i><b>4</b> Methodology</a></li>
+<li class="chapter" data-level="5" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>5</b> Results</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="results.html"><a href="results.html#ols"><i class="fa fa-check"></i><b>5.1</b> OLS</a></li>
+<li class="chapter" data-level="5.2" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.2</b> Shapiro-Wilk Normality Test</a></li>
+<li class="chapter" data-level="5.3" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.3</b> Moran’s I on OLS residuals</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="results.html"><a href="results.html#south"><i class="fa fa-check"></i><b>5.3.1</b> South</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="results.html"><a href="results.html#lagrange-multiplier-tests"><i class="fa fa-check"></i><b>5.4</b> Lagrange Multiplier Tests</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="results.html"><a href="results.html#london"><i class="fa fa-check"></i><b>5.4.1</b> London</a></li>
+<li class="chapter" data-level="5.4.2" data-path="results.html"><a href="results.html#north"><i class="fa fa-check"></i><b>5.4.2</b> North</a></li>
+<li class="chapter" data-level="5.4.3" data-path="results.html"><a href="results.html#east-and-west"><i class="fa fa-check"></i><b>5.4.3</b> East and West</a></li>
+<li class="chapter" data-level="5.4.4" data-path="results.html"><a href="results.html#south-1"><i class="fa fa-check"></i><b>5.4.4</b> South</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5</b> Spatial Regression Models</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.1</b> Spatial Lag Model</a></li>
+<li class="chapter" data-level="5.5.2" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.2</b> Spatial Error Model</a></li>
+<li class="chapter" data-level="5.5.3" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.3</b> Spatial Durbin</a></li>
+<li class="chapter" data-level="5.5.4" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.4</b> GWR</a></li>
+<li class="chapter" data-level="5.5.5" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.5</b> OLS and Spatial Filtering</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html"><i class="fa fa-check"></i><b>6</b> Discussion and Conclusions</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#model-selection"><i class="fa fa-check"></i><b>6.1</b> Model Selection</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#greater-london"><i class="fa fa-check"></i><b>6.1.1</b> Greater London</a></li>
+<li class="chapter" data-level="6.1.2" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#north-london"><i class="fa fa-check"></i><b>6.1.2</b> North London</a></li>
+<li class="chapter" data-level="6.1.3" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#east-london"><i class="fa fa-check"></i><b>6.1.3</b> East London</a></li>
+<li class="chapter" data-level="6.1.4" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#west-london"><i class="fa fa-check"></i><b>6.1.4</b> West London</a></li>
+<li class="chapter" data-level="6.1.5" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#south-london"><i class="fa fa-check"></i><b>6.1.5</b> South London</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#limitations-and-future-work"><i class="fa fa-check"></i><b>6.2</b> Limitations and future work</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i><b>7</b> Appendix</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="appendix.html"><a href="appendix.html#ordinary-least-squares-ols-results"><i class="fa fa-check"></i><b>7.1</b> Ordinary Least Squares (OLS) Results</a></li>
+<li class="chapter" data-level="7.2" data-path="appendix.html"><a href="appendix.html#spatial-lag-results"><i class="fa fa-check"></i><b>7.2</b> Spatial Lag Results</a></li>
+<li class="chapter" data-level="7.3" data-path="appendix.html"><a href="appendix.html#spatial-error-results"><i class="fa fa-check"></i><b>7.3</b> Spatial Error Results</a></li>
+<li class="chapter" data-level="7.4" data-path="appendix.html"><a href="appendix.html#spatial-durbin-results"><i class="fa fa-check"></i><b>7.4</b> Spatial Durbin Results</a></li>
+<li class="chapter" data-level="7.5" data-path="appendix.html"><a href="appendix.html#geographically-weighted-regression-results"><i class="fa fa-check"></i><b>7.5</b> Geographically Weighted Regression Results</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="appendix.html"><a href="appendix.html#shapiro-wilk-normality-tests-before-normalisation"><i class="fa fa-check"></i><b>7.5.1</b> Shapiro-Wilk Normality Tests before normalisation</a></li>
+<li class="chapter" data-level="7.5.2" data-path="appendix.html"><a href="appendix.html#shapiro-wilk-normality-test-after-normalisation"><i class="fa fa-check"></i><b>7.5.2</b> Shapiro-Wilk Normality Test after normalisation</a></li>
+<li class="chapter" data-level="7.5.3" data-path="appendix.html"><a href="appendix.html#shapiro-wlike-normality-test-for-ols-residuals"><i class="fa fa-check"></i><b>7.5.3</b> Shapiro-Wlike Normality Test for OLS Residuals</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="appendix.html"><a href="appendix.html#ols-with-spatial-filtering-results"><i class="fa fa-check"></i><b>7.6</b> OLS with Spatial Filtering Results</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="appendix.html"><a href="appendix.html#lagrange-multiplier-diagnostics-for-spatial-dependence"><i class="fa fa-check"></i><b>7.6.1</b> Lagrange Multiplier Diagnostics for Spatial Dependence</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>8</b> References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Modelling correlation between access to green space and demographic and health variables in London.</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="exploratory-spatial-data-analysis" class="section level1" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Exploratory Spatial Data Analysis</h1>
+<p>Exploratory spatial data analysis (ESDA) was performed to gain an insight into the spatial patterns that are present in the data. This ESDA was used to support our decision when choosing the most appropriate models.</p>
+<div id="london-greenspace-distribution" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> London Greenspace distribution</h2>
+<div class="figure"><span id="fig:boxplot"></span>
+<img src="group_5_report_bookdown_files/figure-html/boxplot-1.png" alt="Box plots of green space distribution in sub-sections of London." width="672" />
+<p class="caption">
+Figure 3.1: Box plots of green space distribution in sub-sections of London.
+</p>
+</div>
+<p>London is a highly urban city with a considerable number of wards comprised of less than 11.9% green space. The median percentage of green space across Greater London was 23.5%.</p>
+<p>The study area has been evenly divided into 4 sections: North, East, South and West London. The boundaries of these areas were decided by considering adjacency and similarity of characteristics. Figure <a href="exploratory-spatial-data-analysis.html#fig:boxplot">3.1</a> illustrates how the four regions of London differ in terms of access to green space. North London has the lowest median % of green space, followed by South London, West London and finally East London. North London displays the highest positive skew, with South London also being positively skewed, whilst East and West London are more normally distributed.</p>
+</div>
+<div id="demographic-distribution-across-london" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Demographic distribution across London</h2>
+<div id="income" class="section level3" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Income</h3>
+<div class="figure"><span id="fig:ldnincomedist"></span>
+<img src="group_5_report_bookdown_files/figure-html/ldnincomedist-1.png" alt="Plot of Median Income per ward in Greater London" width="672" />
+<p class="caption">
+Figure 3.2: Plot of Median Income per ward in Greater London
+</p>
+</div>
+<p>As seen in Figure <a href="exploratory-spatial-data-analysis.html#fig:ldnincomedist">3.2</a>, the wards with the highest median incomes (above £56,000) are found in areas of London such as Kensington and Chelsea, Richmond an Hampstead. In comparison, those with the lowest median incomes are located on the periphery of the city, particularly towards the West and East, with a section of low income wards along the River Lea valley in the North.</p>
+</div>
+<div id="age" class="section level3" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Age</h3>
+<div class="figure"><span id="fig:ldnagedist"></span>
+<img src="group_5_report_bookdown_files/figure-html/ldnagedist-1.png" alt="Plot of Median Age per ward in Greater London" width="672" />
+<p class="caption">
+Figure 3.3: Plot of Median Age per ward in Greater London
+</p>
+</div>
+<p>Evident in Figure <a href="exploratory-spatial-data-analysis.html#fig:ldnagedist">3.3</a>, younger populations are seen in more central areas, and particularly the “East End” of London. The median age is higher in those wards on the edge of Greater London that are perhaps quieter and where access to nature may be increased. Many of the wards with the highest median ages in the South of London, on the borders of Kent, Surrey and Sussex, as well as the North West, North and North East boundaries. There are some exceptions, notably areas of higher median income in the South-West such as Richmond also have higher median ages.</p>
+</div>
+<div id="life-expectancy" class="section level3" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Life Expectancy</h3>
+<div class="figure"><span id="fig:ldnlife"></span>
+<img src="group_5_report_bookdown_files/figure-html/ldnlife-1.png" alt="Plot of Life Expectancy per ward in Greater London" width="672" />
+<p class="caption">
+Figure 3.4: Plot of Life Expectancy per ward in Greater London
+</p>
+</div>
+<p>As seen in Figure <a href="exploratory-spatial-data-analysis.html#fig:ldnlife">3.4</a>, life expectancy is generally higher in the West than the East, with much of the East having a life expectancy below 80. The highest life expectancies are within Central London, towards affluent areas in the North such as Highgate, and the South West such as Kingston. Higher life expectancies can also be in areas of the South East on the border of Kent and East Sussex.</p>
+</div>
+<div id="ethnicity" class="section level3" number="3.2.4">
+<h3><span class="header-section-number">3.2.4</span> Ethnicity</h3>
+<div class="figure"><span id="fig:demoplots"></span>
+<img src="group_5_report_bookdown_files/figure-html/demoplots-1.png" alt="Plots of the ethnicity distribution per ward in Greater London" width="672" />
+<p class="caption">
+Figure 3.5: Plots of the ethnicity distribution per ward in Greater London
+</p>
+</div>
+<p>As evident in Figure <a href="exploratory-spatial-data-analysis.html#fig:demoplots">3.5</a>, as of the 2011 census, Greater London has a large and diverse ethnic minority population with 18.4% of Londoners identifying as Asian/Asian British, 13.3% identifying as Black, 5% identifying as Mixed, and 3.4% identifying with Other ethnicities. The remaining 59.8% of Londoners identify as White. Areas with larger Black populations are concentrated around the east and south of London. For the Asian population, there is a great concentration around central London as well as the Lea Valley towards the North of London, with another cluster around South east London in the Lewisham area. The Mixed population represent less than 10% in all wards, but the distribution tends to be highly concentrated around south-west London and east London, with a significantly smaller Mixed population in the south-east. There are clusters of Other ethnicities around East London, particularly in the Stratford area and around the North West and Hillingdon area.</p>
+</div>
+</div>
+<div id="spatial-autocorrelation" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Spatial Autocorrelation</h2>
+<div id="global-morans-i" class="section level3" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Global Moran’s I</h3>
+<p>Tests of spatial autocorrelation enable clear understanding of the extent to which neighbouring wards in Greater London are significantly clustered spatially. The Global Moran’s I was used to measure spatial autocorrelation between green space across every ward in London, by comparing the actual value for green space to a distance-weighted matrix of neighbours, returning a value between -1 and 1 (<span class="citation"><a href="references.html#ref-houlden_spatial_2019-1" role="doc-biblioref">Houlden et al.</a> (<a href="references.html#ref-houlden_spatial_2019-1" role="doc-biblioref">2019</a>)</span>). This is calculated through the following formula:</p>
+<p><span class="math inline">\(\Large I=\frac{n}{\sum_{i} \sum_{j} w_{i j}} \frac{\sum_{i} \sum_{j} w_{i j}\left(x_{i}-\bar{x}\right)\left(x_{j}-\bar{x}\right)}{\sum_{i}\left(x_{i}-\bar{x}\right)^{2}}\)</span></p>
+<p>Where <span class="math inline">\(\Large n\)</span> is the number of spatial locations; <span class="math inline">\(\Large x_1\)</span> and <span class="math inline">\(\Large x_j\)</span> are the values of the spatial process measured at every location <span class="math inline">\(\Large i\)</span> and <span class="math inline">\(\Large j\)</span>, respectively; <span class="math inline">\(\Large \bar{x}\)</span> represents the mean of <span class="math inline">\(\Large x\)</span>; <span class="math inline">\(\Large w_{ij}\)</span> is the element of a spatial weight matrix <span class="math inline">\(\Large W\)</span> giving the spatial weight between locations <span class="math inline">\(\Large i\)</span> and <span class="math inline">\(\Large j\)</span>.</p>
+<p>The Global Moran’s I across Greater London was 0.285, suggesting positive autocorrelation. For the Global Moran’s I statistic, the null hypothesis states that the spatial processes promoting the observed pattern of green space occur by random chance. To test this, we can use a Monte-Carlo simulation which uses a permutation test to examine how often the value of the observed statistic is seen through randomly chance.</p>
+<p>The Monte-Carlo simulation of Moran’s I shows that the observed value of Moran’s I was higher than any of the 999 random permutations, and the observed value has a p-value of 0.001. This allows us to reject the null hypothesis. We can therefore conclude that, at the ward level in Greater London, green space is significantly positively autocorrelated.</p>
+</div>
+<div id="local-morans-i" class="section level3" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> Local Moran’s I</h3>
+<div class="figure"><span id="fig:localmoran"></span>
+<img src="group_5_report_bookdown_files/figure-html/localmoran-1.png" alt="Plot of Local Moran's I of Green Space in Greater London" width="672" />
+<p class="caption">
+Figure 3.6: Plot of Local Moran’s I of Green Space in Greater London
+</p>
+</div>
+<div class="figure"><span id="fig:lmadjust"></span>
+<img src="group_5_report_bookdown_files/figure-html/lmadjust-1.png" alt="Plot of Significant and Non Significant Local Moran's I Results in Greater London" width="672" />
+<p class="caption">
+Figure 3.7: Plot of Significant and Non Significant Local Moran’s I Results in Greater London
+</p>
+</div>
+<p>In addition to the Global Moran’s I, it is useful to examine the Local Moran’s I (Figure <a href="exploratory-spatial-data-analysis.html#fig:localmoran">3.6</a> , Figure <a href="exploratory-spatial-data-analysis.html#fig:lmadjust">3.7</a>) which is a method to identify local clusters and local spatial outliers.</p>
+<div class="figure"><span id="fig:cluster"></span>
+<img src="group_5_report_bookdown_files/figure-html/cluster-1.png" alt="Plot of High-High and Low-Low Green Space Clusters in Greater London" width="672" />
+<p class="caption">
+Figure 3.8: Plot of High-High and Low-Low Green Space Clusters in Greater London
+</p>
+</div>
+<p>Figure <a href="exploratory-spatial-data-analysis.html#fig:cluster">3.8</a> shows significant High-High clusters around the perimeter of East, North and North-West London. The area around Richmond in the South West of London has a High-High cluster, presumably due to the presence of one of London’s largest parks (Richmond Park). In addition, there were clusters of Low-Low green space access, including around the highly urban wards of Boleyn, Green Street East and Green Street West.</p>
+<div class="figure"><span id="fig:moranplot"></span>
+<img src="group_5_report_bookdown_files/figure-html/moranplot-1.png" alt="Moran scatterplot of Green Space" width="672" />
+<p class="caption">
+Figure 3.9: Moran scatterplot of Green Space
+</p>
+</div>
+<p>The Moran scatter plot shown in Figure <a href="exploratory-spatial-data-analysis.html#fig:moranplot">3.9</a> displays the % green space and London borough of each ward. Clustering of boroughs in areas of the scatterplot can be seen. This supports the High-High, Low-Low map in Figure <a href="exploratory-spatial-data-analysis.html#fig:cluster">3.8</a>.</p>
+</div>
+<div id="semivariogram" class="section level3" number="3.3.3">
+<h3><span class="header-section-number">3.3.3</span> Semivariogram</h3>
+<div class="figure"><span id="fig:semivariogram"></span>
+<img src="group_5_report_bookdown_files/figure-html/semivariogram-1.png" alt="Greenspace semivariogram" width="672" />
+<p class="caption">
+Figure 3.10: Greenspace semivariogram
+</p>
+</div>
+<p>A semivariogram examines how semi-variance increases with distance. From the semivariogram in Figure <a href="exploratory-spatial-data-analysis.html#fig:semivariogram">3.10</a> we can see that the semi-variance increases up to a distance of around 4000m, at which point it levels off.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="data-description.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="methodology.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["group_5_report_bookdown.pdf", "group_5_report_bookdown.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

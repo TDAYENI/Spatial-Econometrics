@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Discussion and Conclusions | Modelling correlation between access to green space and demographic and health variables in London.</title>
+  <meta name="description" content="Chapter 6 Discussion and Conclusions | Modelling correlation between access to green space and demographic and health variables in London." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Discussion and Conclusions | Modelling correlation between access to green space and demographic and health variables in London." />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Discussion and Conclusions | Modelling correlation between access to green space and demographic and health variables in London." />
+  
+  
+  
+
+<meta name="author" content="Titilayo Ayeni, Shenzhangyin Yang, Niamh French, James Edwards" />
+
+
+<meta name="date" content="2021-01-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="results.html"/>
+<link rel="next" href="appendix.html"/>
+<script src="libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+CEGE0097 Group Coursework
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="data-description.html"><a href="data-description.html"><i class="fa fa-check"></i><b>2</b> Data Description</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="data-description.html"><a href="data-description.html#green-space-data"><i class="fa fa-check"></i><b>2.1</b> Green Space Data</a></li>
+<li class="chapter" data-level="2.2" data-path="data-description.html"><a href="data-description.html#demographic-data"><i class="fa fa-check"></i><b>2.2</b> Demographic Data</a></li>
+<li class="chapter" data-level="2.3" data-path="data-description.html"><a href="data-description.html#data-multicollinearity"><i class="fa fa-check"></i><b>2.3</b> Data Multicollinearity</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html"><i class="fa fa-check"></i><b>3</b> Exploratory Spatial Data Analysis</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#london-greenspace-distribution"><i class="fa fa-check"></i><b>3.1</b> London Greenspace distribution</a></li>
+<li class="chapter" data-level="3.2" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#demographic-distribution-across-london"><i class="fa fa-check"></i><b>3.2</b> Demographic distribution across London</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#income"><i class="fa fa-check"></i><b>3.2.1</b> Income</a></li>
+<li class="chapter" data-level="3.2.2" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#age"><i class="fa fa-check"></i><b>3.2.2</b> Age</a></li>
+<li class="chapter" data-level="3.2.3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#life-expectancy"><i class="fa fa-check"></i><b>3.2.3</b> Life Expectancy</a></li>
+<li class="chapter" data-level="3.2.4" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#ethnicity"><i class="fa fa-check"></i><b>3.2.4</b> Ethnicity</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#spatial-autocorrelation"><i class="fa fa-check"></i><b>3.3</b> Spatial Autocorrelation</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#global-morans-i"><i class="fa fa-check"></i><b>3.3.1</b> Global Moran’s I</a></li>
+<li class="chapter" data-level="3.3.2" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#local-morans-i"><i class="fa fa-check"></i><b>3.3.2</b> Local Moran’s I</a></li>
+<li class="chapter" data-level="3.3.3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#semivariogram"><i class="fa fa-check"></i><b>3.3.3</b> Semivariogram</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="methodology.html"><a href="methodology.html"><i class="fa fa-check"></i><b>4</b> Methodology</a></li>
+<li class="chapter" data-level="5" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>5</b> Results</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="results.html"><a href="results.html#ols"><i class="fa fa-check"></i><b>5.1</b> OLS</a></li>
+<li class="chapter" data-level="5.2" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.2</b> Shapiro-Wilk Normality Test</a></li>
+<li class="chapter" data-level="5.3" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.3</b> Moran’s I on OLS residuals</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="results.html"><a href="results.html#south"><i class="fa fa-check"></i><b>5.3.1</b> South</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="results.html"><a href="results.html#lagrange-multiplier-tests"><i class="fa fa-check"></i><b>5.4</b> Lagrange Multiplier Tests</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="results.html"><a href="results.html#london"><i class="fa fa-check"></i><b>5.4.1</b> London</a></li>
+<li class="chapter" data-level="5.4.2" data-path="results.html"><a href="results.html#north"><i class="fa fa-check"></i><b>5.4.2</b> North</a></li>
+<li class="chapter" data-level="5.4.3" data-path="results.html"><a href="results.html#east-and-west"><i class="fa fa-check"></i><b>5.4.3</b> East and West</a></li>
+<li class="chapter" data-level="5.4.4" data-path="results.html"><a href="results.html#south-1"><i class="fa fa-check"></i><b>5.4.4</b> South</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5</b> Spatial Regression Models</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.1</b> Spatial Lag Model</a></li>
+<li class="chapter" data-level="5.5.2" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.2</b> Spatial Error Model</a></li>
+<li class="chapter" data-level="5.5.3" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.3</b> Spatial Durbin</a></li>
+<li class="chapter" data-level="5.5.4" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.4</b> GWR</a></li>
+<li class="chapter" data-level="5.5.5" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.5</b> OLS and Spatial Filtering</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html"><i class="fa fa-check"></i><b>6</b> Discussion and Conclusions</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#model-selection"><i class="fa fa-check"></i><b>6.1</b> Model Selection</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#greater-london"><i class="fa fa-check"></i><b>6.1.1</b> Greater London</a></li>
+<li class="chapter" data-level="6.1.2" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#north-london"><i class="fa fa-check"></i><b>6.1.2</b> North London</a></li>
+<li class="chapter" data-level="6.1.3" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#east-london"><i class="fa fa-check"></i><b>6.1.3</b> East London</a></li>
+<li class="chapter" data-level="6.1.4" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#west-london"><i class="fa fa-check"></i><b>6.1.4</b> West London</a></li>
+<li class="chapter" data-level="6.1.5" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#south-london"><i class="fa fa-check"></i><b>6.1.5</b> South London</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#limitations-and-future-work"><i class="fa fa-check"></i><b>6.2</b> Limitations and future work</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i><b>7</b> Appendix</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="appendix.html"><a href="appendix.html#ordinary-least-squares-ols-results"><i class="fa fa-check"></i><b>7.1</b> Ordinary Least Squares (OLS) Results</a></li>
+<li class="chapter" data-level="7.2" data-path="appendix.html"><a href="appendix.html#spatial-lag-results"><i class="fa fa-check"></i><b>7.2</b> Spatial Lag Results</a></li>
+<li class="chapter" data-level="7.3" data-path="appendix.html"><a href="appendix.html#spatial-error-results"><i class="fa fa-check"></i><b>7.3</b> Spatial Error Results</a></li>
+<li class="chapter" data-level="7.4" data-path="appendix.html"><a href="appendix.html#spatial-durbin-results"><i class="fa fa-check"></i><b>7.4</b> Spatial Durbin Results</a></li>
+<li class="chapter" data-level="7.5" data-path="appendix.html"><a href="appendix.html#geographically-weighted-regression-results"><i class="fa fa-check"></i><b>7.5</b> Geographically Weighted Regression Results</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="appendix.html"><a href="appendix.html#shapiro-wilk-normality-tests-before-normalisation"><i class="fa fa-check"></i><b>7.5.1</b> Shapiro-Wilk Normality Tests before normalisation</a></li>
+<li class="chapter" data-level="7.5.2" data-path="appendix.html"><a href="appendix.html#shapiro-wilk-normality-test-after-normalisation"><i class="fa fa-check"></i><b>7.5.2</b> Shapiro-Wilk Normality Test after normalisation</a></li>
+<li class="chapter" data-level="7.5.3" data-path="appendix.html"><a href="appendix.html#shapiro-wlike-normality-test-for-ols-residuals"><i class="fa fa-check"></i><b>7.5.3</b> Shapiro-Wlike Normality Test for OLS Residuals</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="appendix.html"><a href="appendix.html#ols-with-spatial-filtering-results"><i class="fa fa-check"></i><b>7.6</b> OLS with Spatial Filtering Results</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="appendix.html"><a href="appendix.html#lagrange-multiplier-diagnostics-for-spatial-dependence"><i class="fa fa-check"></i><b>7.6.1</b> Lagrange Multiplier Diagnostics for Spatial Dependence</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>8</b> References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Modelling correlation between access to green space and demographic and health variables in London.</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="discussion-and-conclusions" class="section level1" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Discussion and Conclusions</h1>
+<div id="model-selection" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Model Selection</h2>
+<p>For most of the study areas, it is evident that a spatial regression model is necessary to account for the spatial autocorrelation and reduce errors. The principle of model selection based solely on AIC is useful but not entirely sufficient. Geographically Weighted Regression has the lowest AIC in every area apart from London (whole) and the South, indicating the best fit. However, for models in all areas there remains statistically significant spatial autocorrelation in the residuals. The Ordinary Least Squares with Spatial Filtering was the only model remove this autocorrelation, reducing the model’s error and increasing its explaining power. For this reason, Ordinary Least Squares and Spatial Filtering were chosen as the best model for predicting green space in all areas where spatial autocorrelation was observed (i.e. all areas except South London).</p>
+<p>Below are details of the models selected as most appropriate for each area. Figures <a href="discussion-and-conclusions.html#fig:Figure-1">6.1</a>, <a href="discussion-and-conclusions.html#fig:Figure-2">6.2</a>, <a href="discussion-and-conclusions.html#fig:Figure-3">6.3</a>, <a href="discussion-and-conclusions.html#fig:Figure-4">6.4</a> and <a href="discussion-and-conclusions.html#fig:Figure-5">6.5</a> display side by side choropleths of London, North, East, West and South. The left map represents the dataset’s values for the percentage of green space; the map adjacent shows fitted or predicted values for the most appropriate model for the area.</p>
+<p><span class="math inline">\(\large g\)</span> = % green space in ward<br />
+<span class="math inline">\(\large age\)</span> = mean age in ward<br />
+<span class="math inline">\(\large le\)</span> = life expectancy in ward<br />
+<span class="math inline">\(\large income\)</span> = mean income in ward<br />
+<span class="math inline">\(\large tp\)</span> = total population in ward<br />
+<span class="math inline">\(\large ap\)</span> = asian population in ward<br />
+<span class="math inline">\(\large bp\)</span> = black population in ward<br />
+<span class="math inline">\(\large mp\)</span> = mixed ethnicity population in ward<br />
+<span class="math inline">\(\large op\)</span> = population in ward of ethnicities other than white or those previously stated<br />
+<span class="math inline">\(\large spatial filter\)</span> = fitted result of Roger Bivand’s semi-parametric spatial filtering function (<span class="citation"><a href="references.html#ref-bivand_spdep_2007" role="doc-biblioref">Bivand</a> (<a href="references.html#ref-bivand_spdep_2007" role="doc-biblioref">2007</a>)</span>) applied to the Ordinary Least Squares model for the area. Documentation for the spatial filtering function can be found at <a href="https://www.rdocumentation.org/packages/spatialreg/versions/1.1-5/topics/SpatialFiltering" class="uri">https://www.rdocumentation.org/packages/spatialreg/versions/1.1-5/topics/SpatialFiltering</a>.<br />
+<span class="math inline">\(\large VC\)</span> = coefficients for the vectors of the spatial filter, as shown in Appendix Section 7.6.</p>
+<div id="greater-london" class="section level3" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Greater London</h3>
+<p>Ordinary Least Squares with Spatial Filtering</p>
+<p><span class="math display">\[\large g = exp(0.0297(age)  -0.0028(le)\\
+\large -0.5967(ln(income)) -0.0341(ln(ap/tp)) \\
+\large-0.0271(ln(bp/tp)) -0.0001(mp/tp) -0.0498(ln(op/tp)) \\
+\large + VC(fitted(spatial filter))) -2.129 \]</span></p>
+<div class="figure"><span id="fig:Figure-1"></span>
+<img src="group_5_report_bookdown_files/figure-html/Figure-1-1.png" alt="Fitted and observed values  of % green space per ward in Greater London" width="672" />
+<p class="caption">
+Figure 6.1: Fitted and observed values of % green space per ward in Greater London
+</p>
+</div>
+</div>
+<div id="north-london" class="section level3" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> North London</h3>
+<p>Ordinary Least Squares with Spatial Filtering</p>
+<p><span class="math display">\[ \large g = exp(0.0724(age) + 0.0474(le) \\
+\large -0.1172(ln(income)) - 0.0008(ln(ap/tp)) \\ 
+\large + 0.4206(ln(bp/tp)) -0.0650(mp/tp) -0.0498(ln(op/tp)) - 3.7756\\
+\large + VC(spatial filter)) - 12 \]</span></p>
+<div class="figure"><span id="fig:Figure-2"></span>
+<img src="group_5_report_bookdown_files/figure-html/Figure-2-1.png" alt="Fitted and observed values  of % green space per ward in North London" width="672" />
+<p class="caption">
+Figure 6.2: Fitted and observed values of % green space per ward in North London
+</p>
+</div>
+</div>
+<div id="east-london" class="section level3" number="6.1.3">
+<h3><span class="header-section-number">6.1.3</span> East London</h3>
+<p>Ordinary Least Squares with Spatial Filtering</p>
+<p><span class="math display">\[ \large g = exp(0.0119(age) -0.0252(le) \\
+\large -0.1075(ln(income)) -0.1683(ln(ap/tp)) \\ 
+\large + 0.0236(ln(bp/tp)) + 0.0005(mp/tp) -0.0860(ln(op/tp))\\
+\large + 7.7045 + VC(spatial filter)) -12 \]</span></p>
+<div class="figure"><span id="fig:Figure-3"></span>
+<img src="group_5_report_bookdown_files/figure-html/Figure-3-1.png" alt="Fitted and observed values  of % green space per ward in East London" width="672" />
+<p class="caption">
+Figure 6.3: Fitted and observed values of % green space per ward in East London
+</p>
+</div>
+</div>
+<div id="west-london" class="section level3" number="6.1.4">
+<h3><span class="header-section-number">6.1.4</span> West London</h3>
+<p>Ordinary Least Squares with Spatial Filtering</p>
+<p><span class="math display">\[ \large g = exp(0.0504(age) -0.0168(le) \\
+\large -1.4774(ln(income)) + 0.0137(ln(ap/tp)) \\ \large -0.3282(ln(bp/tp)) + 0.0003(mp/tp) -0.0110(ln(op/tp))\\ 
+\large + 20.8318 + VC(spatial filter)) -12 \]</span></p>
+<div class="figure"><span id="fig:Figure-4"></span>
+<img src="group_5_report_bookdown_files/figure-html/Figure-4-1.png" alt="Fitted and observed values  of % green space per ward in West London" width="672" />
+<p class="caption">
+Figure 6.4: Fitted and observed values of % green space per ward in West London
+</p>
+</div>
+</div>
+<div id="south-london" class="section level3" number="6.1.5">
+<h3><span class="header-section-number">6.1.5</span> South London</h3>
+<p>Ordinary Least Squares</p>
+<p><span class="math display">\[\large g = exp(0.0122(age) + 0.0155(le) \\
+\large -0.3715(ln(income)) -0.0415(ln(ap/tp)) \\ 
+\large + 0.0263(ln(bp/tp)) -0.0002(mp/tp) -0.1623(ln(op/tp)) + 6.9080) -12  \]</span></p>
+<div class="figure"><span id="fig:Figure-5"></span>
+<img src="group_5_report_bookdown_files/figure-html/Figure-5-1.png" alt="Fitted and observed values  of % green space per ward in South London" width="672" />
+<p class="caption">
+Figure 6.5: Fitted and observed values of % green space per ward in South London
+</p>
+</div>
+<p>It can be seen that these models are fairly competent for predicting the spatial distribution of access to green space, but underestimate values in the vast majority of cases. It can be concluded that the independent variables considered in this study are somewhat reliable predictors of access to green space, and therefore are closely related. The sign and magnitude of coefficients in the models can be interrogated to understand the relative influence different independent variables have on predicting access to green space in a ward. For example, in most of the models the number of Mixed ethnicity people living in the ward has less influence on predicting access to green space than the median age of the residents of that ward, as demonstrated by the relative magnitudes of their coefficients. The coefficient for the median age variable is positive in all models, suggesting wards with an older population have better access to green spaces. A number of the independent variables have coefficients of different signs in models of different areas, highlighting the importance of modelling at a local scale rather than assuming a pattern in one area will be replicated elsewhere. The requirement of different models for different areas emphasises the complexity of access to green space, further work may create a more robust model that fits data for all the study areas.</p>
+</div>
+</div>
+<div id="limitations-and-future-work" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Limitations and future work</h2>
+<p>Significant multicollinearity between independent variables raises concerns for the results of this study. Regression analysis assumes that a change in the value of an independent variable should change the value of the dependent variable and not affect any other independent variables (<span class="citation"><a href="references.html#ref-farrar_multicollinearity_1967" role="doc-biblioref">Farrar and Glauber</a> (<a href="references.html#ref-farrar_multicollinearity_1967" role="doc-biblioref">1967</a>)</span>). However, correlation between independent variables (multicollinearity) reduces the precision of coefficient estimates, which in turn reduces the reliability of p-values and increases the difficulty of identifying statistically significant independent variables. It can also cause coefficient estimates to change dramatically if small changes are made to other independent variables in the model (<span class="citation"><a href="references.html#ref-farrar_multicollinearity_1967" role="doc-biblioref">Farrar and Glauber</a> (<a href="references.html#ref-farrar_multicollinearity_1967" role="doc-biblioref">1967</a>)</span>). Two approaches were considered to reduce multicollinearity. The first approach would be to combine highly correlated independent variables into larger categories; however, this was considered to be an oversimplification and inappropriate considering the nature of the variables involved. The second approach would be to remove highly correlated variables. As the ‘wellbeing’ variable showed a high correlation with many other independent variables it was removed. The ‘white’ variable was also highly correlated with many other independent variables and had much higher values in each ward than other ethnic groups. Therefore, this variable was also removed. Future work could seek to further reduce correlations between independent variables or create a model unlikely to be influenced by multicollinearity.</p>
+<p>A variety of indicators were available for evaluating model fit including log-likelihood, R<sup>2</sup>, spatial tests on regression residuals, Lagrange-Multiplier tests, Alkaline Information Criterion, Bayesian Information Criterion and least squares. The Alkaline Information Criterion proved easiest for comparison between models as this indicator was available when using regression functions from the R packages ‘spdep,’ ‘spgwr’ and ‘spatialreg.’ However, other indicators showed different relative best fit between models. Future work could further evaluate the fit of each model in greater detail, and interrogate the merits of each measure of model fit in greater depth.</p>
+<p>This study uses the aggregated spatial units of London wards (official subdivisions of London boroughs). These units were used because they are a well-understood subdivision of London and relevant to those working for London councils or planners, the key stakeholders in this study. Wards are the finest spatial units available for the London data required and are standardised across all of the datarequired for this study. Two problems are introduced due to the aggregation of spatial point data into areal units: the modifiable areal unit problem (MAUP) and the problem of ecological fallacy. The MAUP occurs because the results of statistical analysis can change significantly depending on the size, shape and position of the aggregated areal units used (<span class="citation"><a href="references.html#ref-goodchild_scale_2011" role="doc-biblioref">Goodchild</a> (<a href="references.html#ref-goodchild_scale_2011" role="doc-biblioref">2011</a>)</span>). The aggregated value will be generated using different point values depending on these three factors. The problem of ecological fallacy occurs when assumptions are made about individual locations or people within a ward based on the characteristics of that ward as a whole (<span class="citation"><a href="references.html#ref-goodchild_scale_2011" role="doc-biblioref">Goodchild</a> (<a href="references.html#ref-goodchild_scale_2011" role="doc-biblioref">2011</a>)</span>). Large differences in the size of areal units can lead to heteroskedasticity in the residuals from regression analysis. The weight matrix used for spatial regression analysis can also significantly affect the results, for example, this study uses a Queen’s weight matrix. This matrix yields different results to a Rook’s matrix. Further work could seek to evaluate the most appropriate matrix in greater depth.</p>
+<p>There are a number of ways to measure access to green space, each with their own limitations. Perhaps the most reliable measure is to use walkable network distance from each individual home in an area to the nearest entrance to a green space (<span class="citation"><a href="references.html#ref-greenspace_information_for_greater_london_access_2015" role="doc-biblioref">Greenspace Information for Greater London</a> (<a href="references.html#ref-greenspace_information_for_greater_london_access_2015" role="doc-biblioref">2015</a>)</span>). A similar measure was used for a case study of Leicester, the measure was the same except for the use of centres of population census output areas in place of individual homes (<span class="citation"><a href="references.html#ref-comber_using_2008" role="doc-biblioref">Comber, Brunsdon, and Green</a> (<a href="references.html#ref-comber_using_2008" role="doc-biblioref">2008</a>)</span>). Many planning authorities simply use Euclidean distances from homes to green spaces to measure access (<span class="citation"><a href="references.html#ref-moseley_green_2013" role="doc-biblioref">Moseley et al.</a> (<a href="references.html#ref-moseley_green_2013" role="doc-biblioref">2013</a>)</span>). Other studies have used the percentage land use vs. population in an areal unit (<span class="citation"><a href="references.html#ref-barbosa_who_2007" role="doc-biblioref">Barbosa et al.</a> (<a href="references.html#ref-barbosa_who_2007" role="doc-biblioref">2007</a>)</span>). Our study first attempted to use the GIGL dataset for regression analysis, however, the residuals of regression analysis were extremely skewed. Normally distributed residuals are desired for regression analysis (<span class="citation"><a href="references.html#ref-jarque_test_1987" role="doc-biblioref">Jarque and Bera</a> (<a href="references.html#ref-jarque_test_1987" role="doc-biblioref">1987</a>)</span>), therefore this dataset was considered inappropriate for our study. Various other datasets and measures were tested for normality of regression residuals, including Euclidean distance to green space for and metric area of green space divided by population per ward. The only data to give normally distributed residuals was a measure of percentage area of green space per ward. Therefore, this data was used for our regression analysis despite the noted lack of nuance in the measure. The data does not consider access to green space across ward boundaries, network walking distances, equality of distribution of green space within a ward or quality of green space. Further work could produce or source a dataset appropriate for regression analysis that considers these important factors.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="results.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="appendix.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["group_5_report_bookdown.pdf", "group_5_report_bookdown.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

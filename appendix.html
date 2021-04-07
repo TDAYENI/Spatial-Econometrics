@@ -1,0 +1,4448 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 7 Appendix | Modelling correlation between access to green space and demographic and health variables in London.</title>
+  <meta name="description" content="Chapter 7 Appendix | Modelling correlation between access to green space and demographic and health variables in London." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 7 Appendix | Modelling correlation between access to green space and demographic and health variables in London." />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 7 Appendix | Modelling correlation between access to green space and demographic and health variables in London." />
+  
+  
+  
+
+<meta name="author" content="Titilayo Ayeni, Shenzhangyin Yang, Niamh French, James Edwards" />
+
+
+<meta name="date" content="2021-01-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="discussion-and-conclusions.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+CEGE0097 Group Coursework
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="data-description.html"><a href="data-description.html"><i class="fa fa-check"></i><b>2</b> Data Description</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="data-description.html"><a href="data-description.html#green-space-data"><i class="fa fa-check"></i><b>2.1</b> Green Space Data</a></li>
+<li class="chapter" data-level="2.2" data-path="data-description.html"><a href="data-description.html#demographic-data"><i class="fa fa-check"></i><b>2.2</b> Demographic Data</a></li>
+<li class="chapter" data-level="2.3" data-path="data-description.html"><a href="data-description.html#data-multicollinearity"><i class="fa fa-check"></i><b>2.3</b> Data Multicollinearity</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html"><i class="fa fa-check"></i><b>3</b> Exploratory Spatial Data Analysis</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#london-greenspace-distribution"><i class="fa fa-check"></i><b>3.1</b> London Greenspace distribution</a></li>
+<li class="chapter" data-level="3.2" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#demographic-distribution-across-london"><i class="fa fa-check"></i><b>3.2</b> Demographic distribution across London</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#income"><i class="fa fa-check"></i><b>3.2.1</b> Income</a></li>
+<li class="chapter" data-level="3.2.2" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#age"><i class="fa fa-check"></i><b>3.2.2</b> Age</a></li>
+<li class="chapter" data-level="3.2.3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#life-expectancy"><i class="fa fa-check"></i><b>3.2.3</b> Life Expectancy</a></li>
+<li class="chapter" data-level="3.2.4" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#ethnicity"><i class="fa fa-check"></i><b>3.2.4</b> Ethnicity</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#spatial-autocorrelation"><i class="fa fa-check"></i><b>3.3</b> Spatial Autocorrelation</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#global-morans-i"><i class="fa fa-check"></i><b>3.3.1</b> Global Moran’s I</a></li>
+<li class="chapter" data-level="3.3.2" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#local-morans-i"><i class="fa fa-check"></i><b>3.3.2</b> Local Moran’s I</a></li>
+<li class="chapter" data-level="3.3.3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#semivariogram"><i class="fa fa-check"></i><b>3.3.3</b> Semivariogram</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="methodology.html"><a href="methodology.html"><i class="fa fa-check"></i><b>4</b> Methodology</a></li>
+<li class="chapter" data-level="5" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>5</b> Results</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="results.html"><a href="results.html#ols"><i class="fa fa-check"></i><b>5.1</b> OLS</a></li>
+<li class="chapter" data-level="5.2" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.2</b> Shapiro-Wilk Normality Test</a></li>
+<li class="chapter" data-level="5.3" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.3</b> Moran’s I on OLS residuals</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="results.html"><a href="results.html#south"><i class="fa fa-check"></i><b>5.3.1</b> South</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="results.html"><a href="results.html#lagrange-multiplier-tests"><i class="fa fa-check"></i><b>5.4</b> Lagrange Multiplier Tests</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="results.html"><a href="results.html#london"><i class="fa fa-check"></i><b>5.4.1</b> London</a></li>
+<li class="chapter" data-level="5.4.2" data-path="results.html"><a href="results.html#north"><i class="fa fa-check"></i><b>5.4.2</b> North</a></li>
+<li class="chapter" data-level="5.4.3" data-path="results.html"><a href="results.html#east-and-west"><i class="fa fa-check"></i><b>5.4.3</b> East and West</a></li>
+<li class="chapter" data-level="5.4.4" data-path="results.html"><a href="results.html#south-1"><i class="fa fa-check"></i><b>5.4.4</b> South</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5</b> Spatial Regression Models</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.1</b> Spatial Lag Model</a></li>
+<li class="chapter" data-level="5.5.2" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.2</b> Spatial Error Model</a></li>
+<li class="chapter" data-level="5.5.3" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.3</b> Spatial Durbin</a></li>
+<li class="chapter" data-level="5.5.4" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.4</b> GWR</a></li>
+<li class="chapter" data-level="5.5.5" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.5</b> OLS and Spatial Filtering</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html"><i class="fa fa-check"></i><b>6</b> Discussion and Conclusions</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#model-selection"><i class="fa fa-check"></i><b>6.1</b> Model Selection</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#greater-london"><i class="fa fa-check"></i><b>6.1.1</b> Greater London</a></li>
+<li class="chapter" data-level="6.1.2" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#north-london"><i class="fa fa-check"></i><b>6.1.2</b> North London</a></li>
+<li class="chapter" data-level="6.1.3" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#east-london"><i class="fa fa-check"></i><b>6.1.3</b> East London</a></li>
+<li class="chapter" data-level="6.1.4" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#west-london"><i class="fa fa-check"></i><b>6.1.4</b> West London</a></li>
+<li class="chapter" data-level="6.1.5" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#south-london"><i class="fa fa-check"></i><b>6.1.5</b> South London</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#limitations-and-future-work"><i class="fa fa-check"></i><b>6.2</b> Limitations and future work</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i><b>7</b> Appendix</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="appendix.html"><a href="appendix.html#ordinary-least-squares-ols-results"><i class="fa fa-check"></i><b>7.1</b> Ordinary Least Squares (OLS) Results</a></li>
+<li class="chapter" data-level="7.2" data-path="appendix.html"><a href="appendix.html#spatial-lag-results"><i class="fa fa-check"></i><b>7.2</b> Spatial Lag Results</a></li>
+<li class="chapter" data-level="7.3" data-path="appendix.html"><a href="appendix.html#spatial-error-results"><i class="fa fa-check"></i><b>7.3</b> Spatial Error Results</a></li>
+<li class="chapter" data-level="7.4" data-path="appendix.html"><a href="appendix.html#spatial-durbin-results"><i class="fa fa-check"></i><b>7.4</b> Spatial Durbin Results</a></li>
+<li class="chapter" data-level="7.5" data-path="appendix.html"><a href="appendix.html#geographically-weighted-regression-results"><i class="fa fa-check"></i><b>7.5</b> Geographically Weighted Regression Results</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="appendix.html"><a href="appendix.html#shapiro-wilk-normality-tests-before-normalisation"><i class="fa fa-check"></i><b>7.5.1</b> Shapiro-Wilk Normality Tests before normalisation</a></li>
+<li class="chapter" data-level="7.5.2" data-path="appendix.html"><a href="appendix.html#shapiro-wilk-normality-test-after-normalisation"><i class="fa fa-check"></i><b>7.5.2</b> Shapiro-Wilk Normality Test after normalisation</a></li>
+<li class="chapter" data-level="7.5.3" data-path="appendix.html"><a href="appendix.html#shapiro-wlike-normality-test-for-ols-residuals"><i class="fa fa-check"></i><b>7.5.3</b> Shapiro-Wlike Normality Test for OLS Residuals</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="appendix.html"><a href="appendix.html#ols-with-spatial-filtering-results"><i class="fa fa-check"></i><b>7.6</b> OLS with Spatial Filtering Results</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="appendix.html"><a href="appendix.html#lagrange-multiplier-diagnostics-for-spatial-dependence"><i class="fa fa-check"></i><b>7.6.1</b> Lagrange Multiplier Diagnostics for Spatial Dependence</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>8</b> References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Modelling correlation between access to green space and demographic and health variables in London.</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="appendix" class="section level1" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Appendix</h1>
+<div id="ordinary-least-squares-ols-results" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Ordinary Least Squares (OLS) Results</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+London
+</th>
+<th style="text-align:left;">
+North
+</th>
+<th style="text-align:left;">
+East
+</th>
+<th style="text-align:left;">
+West
+</th>
+<th style="text-align:left;">
+South
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Residual Standard Error
+</td>
+<td style="text-align:left;">
+0.4189
+</td>
+<td style="text-align:left;">
+0.3848
+</td>
+<td style="text-align:left;">
+0.4365
+</td>
+<td style="text-align:left;">
+0.3804
+</td>
+<td style="text-align:left;">
+0.3883
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Multiple R-squared
+</td>
+<td style="text-align:left;">
+0.1384
+</td>
+<td style="text-align:left;">
+0.2322
+</td>
+<td style="text-align:left;">
+0.21
+</td>
+<td style="text-align:left;">
+0.3045
+</td>
+<td style="text-align:left;">
+0.1451
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Adjusted R-squared
+</td>
+<td style="text-align:left;">
+0.1286
+</td>
+<td style="text-align:left;">
+0.1899
+</td>
+<td style="text-align:left;">
+0.1765
+</td>
+<td style="text-align:left;">
+0.2722
+</td>
+<td style="text-align:left;">
+0.1052
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+p-Value
+</td>
+<td style="text-align:left;">
+2.20E-16
+</td>
+<td style="text-align:left;">
+1.58E-05
+</td>
+<td style="text-align:left;">
+1.59E-06
+</td>
+<td style="text-align:left;">
+1.08E-09
+</td>
+<td style="text-align:left;">
+0.001183
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="spatial-lag-results" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Spatial Lag Results</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+London
+</th>
+<th style="text-align:left;">
+North
+</th>
+<th style="text-align:left;">
+East
+</th>
+<th style="text-align:left;">
+West
+</th>
+<th style="text-align:left;">
+South
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Rho
+</td>
+<td style="text-align:left;">
+0.40297
+</td>
+<td style="text-align:left;">
+0.32206
+</td>
+<td style="text-align:left;">
+0.29468
+</td>
+<td style="text-align:left;">
+0.45669
+</td>
+<td style="text-align:left;">
+-0.13798
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LR test value
+</td>
+<td style="text-align:left;">
+49.379
+</td>
+<td style="text-align:left;">
+7.3763
+</td>
+<td style="text-align:left;">
+7.0177
+</td>
+<td style="text-align:left;">
+17.906
+</td>
+<td style="text-align:left;">
+1.1217
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+p-Value
+</td>
+<td style="text-align:left;">
+2.11E-12
+</td>
+<td style="text-align:left;">
+0.0066088
+</td>
+<td style="text-align:left;">
+0.0080709
+</td>
+<td style="text-align:left;">
+2.32E-05
+</td>
+<td style="text-align:left;">
+0.28955
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Log Likelihood
+</td>
+<td style="text-align:left;">
+-314.2866
+</td>
+<td style="text-align:left;">
+-54.80725
+</td>
+<td style="text-align:left;">
+-94.47798
+</td>
+<td style="text-align:left;">
+-58.85549
+</td>
+<td style="text-align:left;">
+-70.04624
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AIC
+</td>
+<td style="text-align:left;">
+648.57
+</td>
+<td style="text-align:left;">
+129.61
+</td>
+<td style="text-align:left;">
+208.96
+</td>
+<td style="text-align:left;">
+137.71
+</td>
+<td style="text-align:left;">
+160.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AIC for OLS
+</td>
+<td style="text-align:left;">
+695.95
+</td>
+<td style="text-align:left;">
+134.99
+</td>
+<td style="text-align:left;">
+213.97
+</td>
+<td style="text-align:left;">
+153.62
+</td>
+<td style="text-align:left;">
+159.21
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Residual Autocorrelation-Test Value
+</td>
+<td style="text-align:left;">
+0.25813
+</td>
+<td style="text-align:left;">
+2.8071
+</td>
+<td style="text-align:left;">
+0.50144
+</td>
+<td style="text-align:left;">
+0.27107
+</td>
+<td style="text-align:left;">
+1.5317
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Residual Autocorrelation-p Value
+</td>
+<td style="text-align:left;">
+0.61141
+</td>
+<td style="text-align:left;">
+0.093845
+</td>
+<td style="text-align:left;">
+0.45188
+</td>
+<td style="text-align:left;">
+0.60262
+</td>
+<td style="text-align:left;">
+0.21586
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="spatial-error-results" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> Spatial Error Results</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+London
+</th>
+<th style="text-align:left;">
+North
+</th>
+<th style="text-align:left;">
+East
+</th>
+<th style="text-align:left;">
+West
+</th>
+<th style="text-align:left;">
+South
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Lambda
+</td>
+<td style="text-align:left;">
+0.41608
+</td>
+<td style="text-align:left;">
+0.27217
+</td>
+<td style="text-align:left;">
+0.27668
+</td>
+<td style="text-align:left;">
+0.46645
+</td>
+<td style="text-align:left;">
+-0.090527
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LR test value
+</td>
+<td style="text-align:left;">
+47.572
+</td>
+<td style="text-align:left;">
+3.2666
+</td>
+<td style="text-align:left;">
+5.3636
+</td>
+<td style="text-align:left;">
+14.224
+</td>
+<td style="text-align:left;">
+0.43599
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+p-Value
+</td>
+<td style="text-align:left;">
+5.30E-12
+</td>
+<td style="text-align:left;">
+0.070703
+</td>
+<td style="text-align:left;">
+0.020562
+</td>
+<td style="text-align:left;">
+0.00016232
+</td>
+<td style="text-align:left;">
+0.50906
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Log Likelihood
+</td>
+<td style="text-align:left;">
+-315.1897
+</td>
+<td style="text-align:left;">
+-56.86209
+</td>
+<td style="text-align:left;">
+-95.30504
+</td>
+<td style="text-align:left;">
+-70.38909
+</td>
+<td style="text-align:left;">
+-70.38909
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AIC
+</td>
+<td style="text-align:left;">
+650.38
+</td>
+<td style="text-align:left;">
+133.72
+</td>
+<td style="text-align:left;">
+210.61
+</td>
+<td style="text-align:left;">
+141.39
+</td>
+<td style="text-align:left;">
+160.78
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AIC for OLS
+</td>
+<td style="text-align:left;">
+695.95
+</td>
+<td style="text-align:left;">
+134.99
+</td>
+<td style="text-align:left;">
+213.97
+</td>
+<td style="text-align:left;">
+153.62
+</td>
+<td style="text-align:left;">
+159.21
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="spatial-durbin-results" class="section level2" number="7.4">
+<h2><span class="header-section-number">7.4</span> Spatial Durbin Results</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+London
+</th>
+<th style="text-align:left;">
+North
+</th>
+<th style="text-align:left;">
+East
+</th>
+<th style="text-align:left;">
+West
+</th>
+<th style="text-align:left;">
+South
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Rho
+</td>
+<td style="text-align:left;">
+0.37479
+</td>
+<td style="text-align:left;">
+0.16363
+</td>
+<td style="text-align:left;">
+0.24079
+</td>
+<td style="text-align:left;">
+0.36453
+</td>
+<td style="text-align:left;">
+-0.1142
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LR test value
+</td>
+<td style="text-align:left;">
+41.266
+</td>
+<td style="text-align:left;">
+1.4741
+</td>
+<td style="text-align:left;">
+4.4874
+</td>
+<td style="text-align:left;">
+9.7043
+</td>
+<td style="text-align:left;">
+0.7311
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+p-Value
+</td>
+<td style="text-align:left;">
+1.33E-10
+</td>
+<td style="text-align:left;">
+0.22469
+</td>
+<td style="text-align:left;">
+0.034146
+</td>
+<td style="text-align:left;">
+0.0018383
+</td>
+<td style="text-align:left;">
+0.39253
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Log Likelihood
+</td>
+<td style="text-align:left;">
+-302.6399
+</td>
+<td style="text-align:left;">
+-48.56145
+</td>
+<td style="text-align:left;">
+-89.76326
+</td>
+<td style="text-align:left;">
+-54.65625
+</td>
+<td style="text-align:left;">
+-65.65341
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AIC
+</td>
+<td style="text-align:left;">
+639.28
+</td>
+<td style="text-align:left;">
+131.12
+</td>
+<td style="text-align:left;">
+213.53
+</td>
+<td style="text-align:left;">
+143.31
+</td>
+<td style="text-align:left;">
+165.31
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AIC for OLS
+</td>
+<td style="text-align:left;">
+678.55
+</td>
+<td style="text-align:left;">
+134.99
+</td>
+<td style="text-align:left;">
+213.9736
+</td>
+<td style="text-align:left;">
+151.02
+</td>
+<td style="text-align:left;">
+159.21
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Residual Autocorrelation-Test Value
+</td>
+<td style="text-align:left;">
+1.9248
+</td>
+<td style="text-align:left;">
+0.35131
+</td>
+<td style="text-align:left;">
+0.18741
+</td>
+<td style="text-align:left;">
+0.67823
+</td>
+<td style="text-align:left;">
+1.8075
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Residual Autocorrelation-p Value
+</td>
+<td style="text-align:left;">
+0.16533
+</td>
+<td style="text-align:left;">
+0.55337
+</td>
+<td style="text-align:left;">
+0.66508
+</td>
+<td style="text-align:left;">
+0.4102
+</td>
+<td style="text-align:left;">
+0.17881
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="geographically-weighted-regression-results" class="section level2" number="7.5">
+<h2><span class="header-section-number">7.5</span> Geographically Weighted Regression Results</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+London
+</th>
+<th style="text-align:left;">
+North
+</th>
+<th style="text-align:left;">
+East
+</th>
+<th style="text-align:left;">
+West
+</th>
+<th style="text-align:left;">
+South
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Fixed Bandwidth
+</td>
+<td style="text-align:left;">
+5823.581
+</td>
+<td style="text-align:left;">
+4941.289
+</td>
+<td style="text-align:left;">
+10334.82
+</td>
+<td style="text-align:left;">
+4850.866
+</td>
+<td style="text-align:left;">
+11140.59
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AICc
+</td>
+<td style="text-align:left;">
+642.0675
+</td>
+<td style="text-align:left;">
+127.0033
+</td>
+<td style="text-align:left;">
+215.8062
+</td>
+<td style="text-align:left;">
+129.3623
+</td>
+<td style="text-align:left;">
+159.2444
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AIC
+</td>
+<td style="text-align:left;">
+5.65E+02
+</td>
+<td style="text-align:left;">
+98.46093
+</td>
+<td style="text-align:left;">
+196.742
+</td>
+<td style="text-align:left;">
+93.19053
+</td>
+<td style="text-align:left;">
+144.7065
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Quasi-global R2
+</td>
+<td style="text-align:left;">
+0.3487077
+</td>
+<td style="text-align:left;">
+0.4189579
+</td>
+<td style="text-align:left;">
+0.2682174
+</td>
+<td style="text-align:left;">
+0.5426054
+</td>
+<td style="text-align:left;">
+0.1824
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Moran’s I
+</td>
+<td style="text-align:left;">
+0.0403409
+</td>
+<td style="text-align:left;">
+0.0175191
+</td>
+<td style="text-align:left;">
+0.08093797
+</td>
+<td style="text-align:left;">
+0.04163799
+</td>
+<td style="text-align:left;">
+-0.04694458
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+p-Value
+</td>
+<td style="text-align:left;">
+4.92E-06
+</td>
+<td style="text-align:left;">
+0.0217
+</td>
+<td style="text-align:left;">
+0.001437
+</td>
+<td style="text-align:left;">
+0.001576
+</td>
+<td style="text-align:left;">
+0.5284
+</td>
+</tr>
+</tbody>
+</table>
+<div id="shapiro-wilk-normality-tests-before-normalisation" class="section level3" number="7.5.1">
+<h3><span class="header-section-number">7.5.1</span> Shapiro-Wilk Normality Tests before normalisation</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Greens pace
+</th>
+<th style="text-align:left;">
+London
+</th>
+<th style="text-align:left;">
+North
+</th>
+<th style="text-align:left;">
+East
+</th>
+<th style="text-align:left;">
+West
+</th>
+<th style="text-align:left;">
+South
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+W
+</td>
+<td style="text-align:left;">
+0.93963
+</td>
+<td style="text-align:left;">
+0.89477
+</td>
+<td style="text-align:left;">
+0.96168
+</td>
+<td style="text-align:left;">
+0.95177
+</td>
+<td style="text-align:left;">
+0.93639
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+p-Value
+</td>
+<td style="text-align:left;">
+3.12E-15
+</td>
+<td style="text-align:left;">
+2.59E-08
+</td>
+<td style="text-align:left;">
+0.0001102
+</td>
+<td style="text-align:left;">
+2.72E-05
+</td>
+<td style="text-align:left;">
+1.65E-06
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="shapiro-wilk-normality-test-after-normalisation" class="section level3" number="7.5.2">
+<h3><span class="header-section-number">7.5.2</span> Shapiro-Wilk Normality Test after normalisation</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+ln(green space + 12)
+</th>
+<th style="text-align:left;">
+London
+</th>
+<th style="text-align:left;">
+North
+</th>
+<th style="text-align:left;">
+East
+</th>
+<th style="text-align:left;">
+West
+</th>
+<th style="text-align:left;">
+South
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+W
+</td>
+<td style="text-align:left;">
+3.12E-15
+</td>
+<td style="text-align:left;">
+0.98383
+</td>
+<td style="text-align:left;">
+0.97935
+</td>
+<td style="text-align:left;">
+0.98605
+</td>
+<td style="text-align:left;">
+0.9928
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+p-Value
+</td>
+<td style="text-align:left;">
+0.003074
+</td>
+<td style="text-align:left;">
+0.1109
+</td>
+<td style="text-align:left;">
+0.01124
+</td>
+<td style="text-align:left;">
+0.1121
+</td>
+<td style="text-align:left;">
+0.6184
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="shapiro-wlike-normality-test-for-ols-residuals" class="section level3" number="7.5.3">
+<h3><span class="header-section-number">7.5.3</span> Shapiro-Wlike Normality Test for OLS Residuals</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+London
+</th>
+<th style="text-align:left;">
+North
+</th>
+<th style="text-align:left;">
+East
+</th>
+<th style="text-align:left;">
+West
+</th>
+<th style="text-align:left;">
+South
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+W
+</td>
+<td style="text-align:left;">
+0.99453
+</td>
+<td style="text-align:left;">
+0.99526
+</td>
+<td style="text-align:left;">
+0.03343
+</td>
+<td style="text-align:left;">
+0.97689
+</td>
+<td style="text-align:left;">
+0.99129
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+p-Value
+</td>
+<td style="text-align:left;">
+0.02431
+</td>
+<td style="text-align:left;">
+0.9386
+</td>
+<td style="text-align:left;">
+0.98304
+</td>
+<td style="text-align:left;">
+0.00907
+</td>
+<td style="text-align:left;">
+0.4481
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="ols-with-spatial-filtering-results" class="section level2" number="7.6">
+<h2><span class="header-section-number">7.6</span> OLS with Spatial Filtering Results</h2>
+<table class="table table-striped table-hover" style="font-size: 12px; ">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+London
+</th>
+<th style="text-align:left;">
+North
+</th>
+<th style="text-align:left;">
+East
+</th>
+<th style="text-align:left;">
+West
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Residual Standard Error
+</td>
+<td style="text-align:left;">
+0.3671
+</td>
+<td style="text-align:left;">
+0.3526
+</td>
+<td style="text-align:left;">
+0.4047
+</td>
+<td style="text-align:left;">
+0.3218
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Multiple R-squared
+</td>
+<td style="text-align:left;">
+0.3758
+</td>
+<td style="text-align:left;">
+0.3959
+</td>
+<td style="text-align:left;">
+0.3415
+</td>
+<td style="text-align:left;">
+0.5384
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Adjusted R-squared
+</td>
+<td style="text-align:left;">
+0.3308
+</td>
+<td style="text-align:left;">
+0.3197
+</td>
+<td style="text-align:left;">
+0.2922
+</td>
+<td style="text-align:left;">
+0.4791
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+p-value
+</td>
+<td style="text-align:left;">
+2.20E-16
+</td>
+<td style="text-align:left;">
+7.43E-08
+</td>
+<td style="text-align:left;">
+5.23E-10
+</td>
+<td style="text-align:left;">
+5.762e-16
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover" style="font-size: 12px; ">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+London
+</th>
+<th style="text-align:left;">
+North
+</th>
+<th style="text-align:left;">
+East
+</th>
+<th style="text-align:left;">
+West
+</th>
+<th style="text-align:left;">
+South
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+Observed Moran’s I
+</td>
+<td style="text-align:left;">
+-0.044942652
+</td>
+<td style="text-align:left;">
+-0.044432333
+</td>
+<td style="text-align:left;">
+-0.020959765
+</td>
+<td style="text-align:left;">
+-0.067750899
+</td>
+<td style="text-align:left;">
+-0.032591742
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+OLS
+</td>
+<td style="text-align:left;">
+-0.0508352899
+</td>
+<td style="text-align:left;">
+-0.076417741
+</td>
+<td style="text-align:left;">
+-0.050377136
+</td>
+<td style="text-align:left;">
+-0.082645384
+</td>
+<td style="text-align:left;">
+-0.030405068
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+Expectation
+</td>
+<td style="text-align:left;">
+0.3952
+</td>
+<td style="text-align:left;">
+0.2542
+</td>
+<td style="text-align:left;">
+0.2472
+</td>
+<td style="text-align:left;">
+0.3631
+</td>
+<td style="text-align:left;">
+0.5179
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+p-value
+</td>
+<td style="text-align:left;">
+-0.044942652
+</td>
+<td style="text-align:left;">
+-0.044432333
+</td>
+<td style="text-align:left;">
+-0.020959765
+</td>
+<td style="text-align:left;">
+-0.067750899
+</td>
+<td style="text-align:left;">
+-0.032591742
+</td>
+</tr>
+</tbody>
+</table>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:100%; ">
+<table class="table table-striped table-hover" style="font-size: 12px; ">
+<thead>
+<tr>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; position: sticky; top:0; background-color: #FFFFFF;" colspan="9">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+London
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Estimate
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Std. Error
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+t value
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Pr(&gt;|t|)
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Estimate
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Std. Error
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+t value
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Pr(&gt;|t|)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:right;">
+9.8709770
+</td>
+<td style="text-align:right;">
+1.5843668
+</td>
+<td style="text-align:right;">
+6.2302347
+</td>
+<td style="text-align:right;">
+0.0000000
+</td>
+<td style="text-align:right;">
+9.8709770
+</td>
+<td style="text-align:right;">
+1.5843668
+</td>
+<td style="text-align:right;">
+6.2302347
+</td>
+<td style="text-align:right;">
+0.0000000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+age
+</td>
+<td style="text-align:right;">
+0.0296997
+</td>
+<td style="text-align:right;">
+0.0060355
+</td>
+<td style="text-align:right;">
+4.9208270
+</td>
+<td style="text-align:right;">
+0.0000011
+</td>
+<td style="text-align:right;">
+0.0296997
+</td>
+<td style="text-align:right;">
+0.0060355
+</td>
+<td style="text-align:right;">
+4.9208270
+</td>
+<td style="text-align:right;">
+0.0000011
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+life_expectancy
+</td>
+<td style="text-align:right;">
+-0.0028445
+</td>
+<td style="text-align:right;">
+0.0095016
+</td>
+<td style="text-align:right;">
+-0.2993662
+</td>
+<td style="text-align:right;">
+0.7647675
+</td>
+<td style="text-align:right;">
+-0.0028445
+</td>
+<td style="text-align:right;">
+0.0095016
+</td>
+<td style="text-align:right;">
+-0.2993662
+</td>
+<td style="text-align:right;">
+0.7647675
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+income
+</td>
+<td style="text-align:right;">
+-0.5967406
+</td>
+<td style="text-align:right;">
+0.1408925
+</td>
+<td style="text-align:right;">
+-4.2354336
+</td>
+<td style="text-align:right;">
+0.0000265
+</td>
+<td style="text-align:right;">
+-0.5967406
+</td>
+<td style="text-align:right;">
+0.1408925
+</td>
+<td style="text-align:right;">
+-4.2354336
+</td>
+<td style="text-align:right;">
+0.0000265
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+asian
+</td>
+<td style="text-align:right;">
+-0.0340785
+</td>
+<td style="text-align:right;">
+0.0241271
+</td>
+<td style="text-align:right;">
+-1.4124571
+</td>
+<td style="text-align:right;">
+0.1583499
+</td>
+<td style="text-align:right;">
+-0.0340785
+</td>
+<td style="text-align:right;">
+0.0241271
+</td>
+<td style="text-align:right;">
+-1.4124571
+</td>
+<td style="text-align:right;">
+0.1583499
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+black
+</td>
+<td style="text-align:right;">
+-0.0271910
+</td>
+<td style="text-align:right;">
+0.0363927
+</td>
+<td style="text-align:right;">
+-0.7471547
+</td>
+<td style="text-align:right;">
+0.4552719
+</td>
+<td style="text-align:right;">
+-0.0271910
+</td>
+<td style="text-align:right;">
+0.0363927
+</td>
+<td style="text-align:right;">
+-0.7471547
+</td>
+<td style="text-align:right;">
+0.4552719
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+other
+</td>
+<td style="text-align:right;">
+-0.0497549
+</td>
+<td style="text-align:right;">
+0.0282910
+</td>
+<td style="text-align:right;">
+-1.7586823
+</td>
+<td style="text-align:right;">
+0.0791570
+</td>
+<td style="text-align:right;">
+-0.0497549
+</td>
+<td style="text-align:right;">
+0.0282910
+</td>
+<td style="text-align:right;">
+-1.7586823
+</td>
+<td style="text-align:right;">
+0.0791570
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+mixed
+</td>
+<td style="text-align:right;">
+-0.0000851
+</td>
+<td style="text-align:right;">
+0.0001007
+</td>
+<td style="text-align:right;">
+-0.8453218
+</td>
+<td style="text-align:right;">
+0.3982786
+</td>
+<td style="text-align:right;">
+-0.0000851
+</td>
+<td style="text-align:right;">
+0.0001007
+</td>
+<td style="text-align:right;">
+-0.8453218
+</td>
+<td style="text-align:right;">
+0.3982786
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec2
+</td>
+<td style="text-align:right;">
+-1.5704160
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-4.2778364
+</td>
+<td style="text-align:right;">
+0.0000221
+</td>
+<td style="text-align:right;">
+-1.5704160
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-4.2778364
+</td>
+<td style="text-align:right;">
+0.0000221
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec4
+</td>
+<td style="text-align:right;">
+1.5795052
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+4.3025955
+</td>
+<td style="text-align:right;">
+0.0000198
+</td>
+<td style="text-align:right;">
+1.5795052
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+4.3025955
+</td>
+<td style="text-align:right;">
+0.0000198
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec29
+</td>
+<td style="text-align:right;">
+-1.3490363
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-3.6747949
+</td>
+<td style="text-align:right;">
+0.0002600
+</td>
+<td style="text-align:right;">
+-1.3490363
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-3.6747949
+</td>
+<td style="text-align:right;">
+0.0002600
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec31
+</td>
+<td style="text-align:right;">
+-1.1944495
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-3.2536980
+</td>
+<td style="text-align:right;">
+0.0012052
+</td>
+<td style="text-align:right;">
+-1.1944495
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-3.2536980
+</td>
+<td style="text-align:right;">
+0.0012052
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec27
+</td>
+<td style="text-align:right;">
+-1.1368771
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-3.0968701
+</td>
+<td style="text-align:right;">
+0.0020499
+</td>
+<td style="text-align:right;">
+-1.1368771
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-3.0968701
+</td>
+<td style="text-align:right;">
+0.0020499
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec19
+</td>
+<td style="text-align:right;">
+-1.0619286
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-2.8927092
+</td>
+<td style="text-align:right;">
+0.0039622
+</td>
+<td style="text-align:right;">
+-1.0619286
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-2.8927092
+</td>
+<td style="text-align:right;">
+0.0039622
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec16
+</td>
+<td style="text-align:right;">
+-1.0325690
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-2.8127332
+</td>
+<td style="text-align:right;">
+0.0050780
+</td>
+<td style="text-align:right;">
+-1.0325690
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-2.8127332
+</td>
+<td style="text-align:right;">
+0.0050780
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec14
+</td>
+<td style="text-align:right;">
+-0.9183091
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-2.5014877
+</td>
+<td style="text-align:right;">
+0.0126408
+</td>
+<td style="text-align:right;">
+-0.9183091
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-2.5014877
+</td>
+<td style="text-align:right;">
+0.0126408
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec58
+</td>
+<td style="text-align:right;">
+-1.0035691
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-2.7337371
+</td>
+<td style="text-align:right;">
+0.0064525
+</td>
+<td style="text-align:right;">
+-1.0035691
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-2.7337371
+</td>
+<td style="text-align:right;">
+0.0064525
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec11
+</td>
+<td style="text-align:right;">
+-0.7833354
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-2.1338173
+</td>
+<td style="text-align:right;">
+0.0332752
+</td>
+<td style="text-align:right;">
+-0.7833354
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-2.1338173
+</td>
+<td style="text-align:right;">
+0.0332752
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec60
+</td>
+<td style="text-align:right;">
+0.9568675
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+2.6065211
+</td>
+<td style="text-align:right;">
+0.0093810
+</td>
+<td style="text-align:right;">
+0.9568675
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+2.6065211
+</td>
+<td style="text-align:right;">
+0.0093810
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec73
+</td>
+<td style="text-align:right;">
+0.9855805
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+2.6847359
+</td>
+<td style="text-align:right;">
+0.0074656
+</td>
+<td style="text-align:right;">
+0.9855805
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+2.6847359
+</td>
+<td style="text-align:right;">
+0.0074656
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec28
+</td>
+<td style="text-align:right;">
+-0.8128152
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-2.2141205
+</td>
+<td style="text-align:right;">
+0.0272073
+</td>
+<td style="text-align:right;">
+-0.8128152
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-2.2141205
+</td>
+<td style="text-align:right;">
+0.0272073
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec6
+</td>
+<td style="text-align:right;">
+0.7074351
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+1.9270637
+</td>
+<td style="text-align:right;">
+0.0544581
+</td>
+<td style="text-align:right;">
+0.7074351
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+1.9270637
+</td>
+<td style="text-align:right;">
+0.0544581
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec42
+</td>
+<td style="text-align:right;">
+0.8049051
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+2.1925735
+</td>
+<td style="text-align:right;">
+0.0287333
+</td>
+<td style="text-align:right;">
+0.8049051
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+2.1925735
+</td>
+<td style="text-align:right;">
+0.0287333
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec52
+</td>
+<td style="text-align:right;">
+0.7899425
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+2.1518150
+</td>
+<td style="text-align:right;">
+0.0318226
+</td>
+<td style="text-align:right;">
+0.7899425
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+2.1518150
+</td>
+<td style="text-align:right;">
+0.0318226
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec65
+</td>
+<td style="text-align:right;">
+-0.8335256
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-2.2705359
+</td>
+<td style="text-align:right;">
+0.0235397
+</td>
+<td style="text-align:right;">
+-0.8335256
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-2.2705359
+</td>
+<td style="text-align:right;">
+0.0235397
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec20
+</td>
+<td style="text-align:right;">
+0.6684498
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+1.8208672
+</td>
+<td style="text-align:right;">
+0.0691404
+</td>
+<td style="text-align:right;">
+0.6684498
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+1.8208672
+</td>
+<td style="text-align:right;">
+0.0691404
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec66
+</td>
+<td style="text-align:right;">
+0.7994872
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+2.1778150
+</td>
+<td style="text-align:right;">
+0.0298206
+</td>
+<td style="text-align:right;">
+0.7994872
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+2.1778150
+</td>
+<td style="text-align:right;">
+0.0298206
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec33
+</td>
+<td style="text-align:right;">
+-0.6956081
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-1.8948468
+</td>
+<td style="text-align:right;">
+0.0586081
+</td>
+<td style="text-align:right;">
+-0.6956081
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-1.8948468
+</td>
+<td style="text-align:right;">
+0.0586081
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec71
+</td>
+<td style="text-align:right;">
+0.8100255
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+2.2065215
+</td>
+<td style="text-align:right;">
+0.0277373
+</td>
+<td style="text-align:right;">
+0.8100255
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+2.2065215
+</td>
+<td style="text-align:right;">
+0.0277373
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec41
+</td>
+<td style="text-align:right;">
+0.7046724
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+1.9195381
+</td>
+<td style="text-align:right;">
+0.0554049
+</td>
+<td style="text-align:right;">
+0.7046724
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+1.9195381
+</td>
+<td style="text-align:right;">
+0.0554049
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec126
+</td>
+<td style="text-align:right;">
+1.0304371
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+2.8069259
+</td>
+<td style="text-align:right;">
+0.0051692
+</td>
+<td style="text-align:right;">
+1.0304371
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+2.8069259
+</td>
+<td style="text-align:right;">
+0.0051692
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec43
+</td>
+<td style="text-align:right;">
+0.6870460
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+1.8715233
+</td>
+<td style="text-align:right;">
+0.0617740
+</td>
+<td style="text-align:right;">
+0.6870460
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+1.8715233
+</td>
+<td style="text-align:right;">
+0.0617740
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec21
+</td>
+<td style="text-align:right;">
+0.5992589
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+1.6323900
+</td>
+<td style="text-align:right;">
+0.1031383
+</td>
+<td style="text-align:right;">
+0.5992589
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+1.6323900
+</td>
+<td style="text-align:right;">
+0.1031383
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec77
+</td>
+<td style="text-align:right;">
+0.7427811
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+2.0233467
+</td>
+<td style="text-align:right;">
+0.0434940
+</td>
+<td style="text-align:right;">
+0.7427811
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+2.0233467
+</td>
+<td style="text-align:right;">
+0.0434940
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec102
+</td>
+<td style="text-align:right;">
+0.7793232
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+2.1228879
+</td>
+<td style="text-align:right;">
+0.0341847
+</td>
+<td style="text-align:right;">
+0.7793232
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+2.1228879
+</td>
+<td style="text-align:right;">
+0.0341847
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec175
+</td>
+<td style="text-align:right;">
+1.1738147
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+3.1974887
+</td>
+<td style="text-align:right;">
+0.0014615
+</td>
+<td style="text-align:right;">
+1.1738147
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+3.1974887
+</td>
+<td style="text-align:right;">
+0.0014615
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec94
+</td>
+<td style="text-align:right;">
+-0.7414185
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-2.0196349
+</td>
+<td style="text-align:right;">
+0.0438791
+</td>
+<td style="text-align:right;">
+-0.7414185
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-2.0196349
+</td>
+<td style="text-align:right;">
+0.0438791
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec54
+</td>
+<td style="text-align:right;">
+0.6296508
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+1.7151782
+</td>
+<td style="text-align:right;">
+0.0868448
+</td>
+<td style="text-align:right;">
+0.6296508
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+1.7151782
+</td>
+<td style="text-align:right;">
+0.0868448
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec112
+</td>
+<td style="text-align:right;">
+-0.8062533
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-2.1962459
+</td>
+<td style="text-align:right;">
+0.0284681
+</td>
+<td style="text-align:right;">
+-0.8062533
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-2.1962459
+</td>
+<td style="text-align:right;">
+0.0284681
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec86
+</td>
+<td style="text-align:right;">
+0.6941237
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+1.8908031
+</td>
+<td style="text-align:right;">
+0.0591471
+</td>
+<td style="text-align:right;">
+0.6941237
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+1.8908031
+</td>
+<td style="text-align:right;">
+0.0591471
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec8
+</td>
+<td style="text-align:right;">
+-0.5089892
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-1.3864940
+</td>
+<td style="text-align:right;">
+0.1661270
+</td>
+<td style="text-align:right;">
+-0.5089892
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-1.3864940
+</td>
+<td style="text-align:right;">
+0.1661270
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec141
+</td>
+<td style="text-align:right;">
+-0.8690080
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-2.3671907
+</td>
+<td style="text-align:right;">
+0.0182499
+</td>
+<td style="text-align:right;">
+-0.8690080
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+-2.3671907
+</td>
+<td style="text-align:right;">
+0.0182499
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(spatial_filter)vec114
+</td>
+<td style="text-align:right;">
+0.6443810
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+1.7553032
+</td>
+<td style="text-align:right;">
+0.0797335
+</td>
+<td style="text-align:right;">
+0.6443810
+</td>
+<td style="text-align:right;">
+0.3671052
+</td>
+<td style="text-align:right;">
+1.7553032
+</td>
+<td style="text-align:right;">
+0.0797335
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:100%; ">
+<table class="table table-striped table-hover" style="font-size: 12px; ">
+<thead>
+<tr>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; position: sticky; top:0; background-color: #FFFFFF;" colspan="9">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+West
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Estimate
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Std. Error
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+t value
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Pr(&gt;|t|)
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Estimate
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Std. Error
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+t value
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Pr(&gt;|t|)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:right;">
+20.8317911
+</td>
+<td style="text-align:right;">
+3.1023756
+</td>
+<td style="text-align:right;">
+6.7147869
+</td>
+<td style="text-align:right;">
+0.0000000
+</td>
+<td style="text-align:right;">
+20.8317911
+</td>
+<td style="text-align:right;">
+3.1023756
+</td>
+<td style="text-align:right;">
+6.7147869
+</td>
+<td style="text-align:right;">
+0.0000000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+age
+</td>
+<td style="text-align:right;">
+0.0503955
+</td>
+<td style="text-align:right;">
+0.0120691
+</td>
+<td style="text-align:right;">
+4.1755747
+</td>
+<td style="text-align:right;">
+0.0000520
+</td>
+<td style="text-align:right;">
+0.0503955
+</td>
+<td style="text-align:right;">
+0.0120691
+</td>
+<td style="text-align:right;">
+4.1755747
+</td>
+<td style="text-align:right;">
+0.0000520
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+life_expectancy
+</td>
+<td style="text-align:right;">
+-0.0168003
+</td>
+<td style="text-align:right;">
+0.0170229
+</td>
+<td style="text-align:right;">
+-0.9869259
+</td>
+<td style="text-align:right;">
+0.3253816
+</td>
+<td style="text-align:right;">
+-0.0168003
+</td>
+<td style="text-align:right;">
+0.0170229
+</td>
+<td style="text-align:right;">
+-0.9869259
+</td>
+<td style="text-align:right;">
+0.3253816
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+income
+</td>
+<td style="text-align:right;">
+-1.4774121
+</td>
+<td style="text-align:right;">
+0.3119440
+</td>
+<td style="text-align:right;">
+-4.7361453
+</td>
+<td style="text-align:right;">
+0.0000053
+</td>
+<td style="text-align:right;">
+-1.4774121
+</td>
+<td style="text-align:right;">
+0.3119440
+</td>
+<td style="text-align:right;">
+-4.7361453
+</td>
+<td style="text-align:right;">
+0.0000053
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+asian
+</td>
+<td style="text-align:right;">
+0.0137365
+</td>
+<td style="text-align:right;">
+0.0514152
+</td>
+<td style="text-align:right;">
+0.2671677
+</td>
+<td style="text-align:right;">
+0.7897332
+</td>
+<td style="text-align:right;">
+0.0137365
+</td>
+<td style="text-align:right;">
+0.0514152
+</td>
+<td style="text-align:right;">
+0.2671677
+</td>
+<td style="text-align:right;">
+0.7897332
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+black
+</td>
+<td style="text-align:right;">
+-0.3282186
+</td>
+<td style="text-align:right;">
+0.0812350
+</td>
+<td style="text-align:right;">
+-4.0403581
+</td>
+<td style="text-align:right;">
+0.0000876
+</td>
+<td style="text-align:right;">
+-0.3282186
+</td>
+<td style="text-align:right;">
+0.0812350
+</td>
+<td style="text-align:right;">
+-4.0403581
+</td>
+<td style="text-align:right;">
+0.0000876
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+other
+</td>
+<td style="text-align:right;">
+-0.0110186
+</td>
+<td style="text-align:right;">
+0.0714357
+</td>
+<td style="text-align:right;">
+-0.1542456
+</td>
+<td style="text-align:right;">
+0.8776382
+</td>
+<td style="text-align:right;">
+-0.0110186
+</td>
+<td style="text-align:right;">
+0.0714357
+</td>
+<td style="text-align:right;">
+-0.1542456
+</td>
+<td style="text-align:right;">
+0.8776382
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+mixed
+</td>
+<td style="text-align:right;">
+0.0003461
+</td>
+<td style="text-align:right;">
+0.0002375
+</td>
+<td style="text-align:right;">
+1.4570771
+</td>
+<td style="text-align:right;">
+0.1473344
+</td>
+<td style="text-align:right;">
+0.0003461
+</td>
+<td style="text-align:right;">
+0.0002375
+</td>
+<td style="text-align:right;">
+1.4570771
+</td>
+<td style="text-align:right;">
+0.1473344
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(w_spatial_filter)vec2
+</td>
+<td style="text-align:right;">
+1.4769840
+</td>
+<td style="text-align:right;">
+0.3217963
+</td>
+<td style="text-align:right;">
+4.5898100
+</td>
+<td style="text-align:right;">
+0.0000098
+</td>
+<td style="text-align:right;">
+1.4769840
+</td>
+<td style="text-align:right;">
+0.3217963
+</td>
+<td style="text-align:right;">
+4.5898100
+</td>
+<td style="text-align:right;">
+0.0000098
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(w_spatial_filter)vec11
+</td>
+<td style="text-align:right;">
+-1.0279445
+</td>
+<td style="text-align:right;">
+0.3217963
+</td>
+<td style="text-align:right;">
+-3.1943946
+</td>
+<td style="text-align:right;">
+0.0017314
+</td>
+<td style="text-align:right;">
+-1.0279445
+</td>
+<td style="text-align:right;">
+0.3217963
+</td>
+<td style="text-align:right;">
+-3.1943946
+</td>
+<td style="text-align:right;">
+0.0017314
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(w_spatial_filter)vec4
+</td>
+<td style="text-align:right;">
+0.7829903
+</td>
+<td style="text-align:right;">
+0.3217963
+</td>
+<td style="text-align:right;">
+2.4331859
+</td>
+<td style="text-align:right;">
+0.0162277
+</td>
+<td style="text-align:right;">
+0.7829903
+</td>
+<td style="text-align:right;">
+0.3217963
+</td>
+<td style="text-align:right;">
+2.4331859
+</td>
+<td style="text-align:right;">
+0.0162277
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(w_spatial_filter)vec23
+</td>
+<td style="text-align:right;">
+1.0302609
+</td>
+<td style="text-align:right;">
+0.3217963
+</td>
+<td style="text-align:right;">
+3.2015929
+</td>
+<td style="text-align:right;">
+0.0016916
+</td>
+<td style="text-align:right;">
+1.0302609
+</td>
+<td style="text-align:right;">
+0.3217963
+</td>
+<td style="text-align:right;">
+3.2015929
+</td>
+<td style="text-align:right;">
+0.0016916
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(w_spatial_filter)vec8
+</td>
+<td style="text-align:right;">
+0.6276460
+</td>
+<td style="text-align:right;">
+0.3217963
+</td>
+<td style="text-align:right;">
+1.9504447
+</td>
+<td style="text-align:right;">
+0.0531208
+</td>
+<td style="text-align:right;">
+0.6276460
+</td>
+<td style="text-align:right;">
+0.3217963
+</td>
+<td style="text-align:right;">
+1.9504447
+</td>
+<td style="text-align:right;">
+0.0531208
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(w_spatial_filter)vec28
+</td>
+<td style="text-align:right;">
+0.8203771
+</td>
+<td style="text-align:right;">
+0.3217963
+</td>
+<td style="text-align:right;">
+2.5493673
+</td>
+<td style="text-align:right;">
+0.0118688
+</td>
+<td style="text-align:right;">
+0.8203771
+</td>
+<td style="text-align:right;">
+0.3217963
+</td>
+<td style="text-align:right;">
+2.5493673
+</td>
+<td style="text-align:right;">
+0.0118688
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(w_spatial_filter)vec24
+</td>
+<td style="text-align:right;">
+0.7160523
+</td>
+<td style="text-align:right;">
+0.3217963
+</td>
+<td style="text-align:right;">
+2.2251723
+</td>
+<td style="text-align:right;">
+0.0276694
+</td>
+<td style="text-align:right;">
+0.7160523
+</td>
+<td style="text-align:right;">
+0.3217963
+</td>
+<td style="text-align:right;">
+2.2251723
+</td>
+<td style="text-align:right;">
+0.0276694
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(w_spatial_filter)vec13
+</td>
+<td style="text-align:right;">
+-0.5265725
+</td>
+<td style="text-align:right;">
+0.3217963
+</td>
+<td style="text-align:right;">
+-1.6363532
+</td>
+<td style="text-align:right;">
+0.1040118
+</td>
+<td style="text-align:right;">
+-0.5265725
+</td>
+<td style="text-align:right;">
+0.3217963
+</td>
+<td style="text-align:right;">
+-1.6363532
+</td>
+<td style="text-align:right;">
+0.1040118
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(w_spatial_filter)vec3
+</td>
+<td style="text-align:right;">
+0.4138796
+</td>
+<td style="text-align:right;">
+0.3217963
+</td>
+<td style="text-align:right;">
+1.2861537
+</td>
+<td style="text-align:right;">
+0.2005124
+</td>
+<td style="text-align:right;">
+0.4138796
+</td>
+<td style="text-align:right;">
+0.3217963
+</td>
+<td style="text-align:right;">
+1.2861537
+</td>
+<td style="text-align:right;">
+0.2005124
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(w_spatial_filter)vec1
+</td>
+<td style="text-align:right;">
+-0.3662773
+</td>
+<td style="text-align:right;">
+0.3217963
+</td>
+<td style="text-align:right;">
+-1.1382270
+</td>
+<td style="text-align:right;">
+0.2569698
+</td>
+<td style="text-align:right;">
+-0.3662773
+</td>
+<td style="text-align:right;">
+0.3217963
+</td>
+<td style="text-align:right;">
+-1.1382270
+</td>
+<td style="text-align:right;">
+0.2569698
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(w_spatial_filter)vec45
+</td>
+<td style="text-align:right;">
+0.5218438
+</td>
+<td style="text-align:right;">
+0.3217963
+</td>
+<td style="text-align:right;">
+1.6216587
+</td>
+<td style="text-align:right;">
+0.1071264
+</td>
+<td style="text-align:right;">
+0.5218438
+</td>
+<td style="text-align:right;">
+0.3217963
+</td>
+<td style="text-align:right;">
+1.6216587
+</td>
+<td style="text-align:right;">
+0.1071264
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:100%; ">
+<table class="table table-striped table-hover" style="font-size: 12px; ">
+<thead>
+<tr>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; position: sticky; top:0; background-color: #FFFFFF;" colspan="9">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+North
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Estimate
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Std. Error
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+t value
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Pr(&gt;|t|)
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Estimate
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Std. Error
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+t value
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Pr(&gt;|t|)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:right;">
+-3.7756022
+</td>
+<td style="text-align:right;">
+5.0005479
+</td>
+<td style="text-align:right;">
+-0.7550377
+</td>
+<td style="text-align:right;">
+0.4517181
+</td>
+<td style="text-align:right;">
+-3.7756022
+</td>
+<td style="text-align:right;">
+5.0005479
+</td>
+<td style="text-align:right;">
+-0.7550377
+</td>
+<td style="text-align:right;">
+0.4517181
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+age
+</td>
+<td style="text-align:right;">
+0.0724045
+</td>
+<td style="text-align:right;">
+0.0136346
+</td>
+<td style="text-align:right;">
+5.3103482
+</td>
+<td style="text-align:right;">
+0.0000005
+</td>
+<td style="text-align:right;">
+0.0724045
+</td>
+<td style="text-align:right;">
+0.0136346
+</td>
+<td style="text-align:right;">
+5.3103482
+</td>
+<td style="text-align:right;">
+0.0000005
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+life_expectancy
+</td>
+<td style="text-align:right;">
+0.0474327
+</td>
+<td style="text-align:right;">
+0.0196163
+</td>
+<td style="text-align:right;">
+2.4180299
+</td>
+<td style="text-align:right;">
+0.0171210
+</td>
+<td style="text-align:right;">
+0.0474327
+</td>
+<td style="text-align:right;">
+0.0196163
+</td>
+<td style="text-align:right;">
+2.4180299
+</td>
+<td style="text-align:right;">
+0.0171210
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+income
+</td>
+<td style="text-align:right;">
+-0.1171889
+</td>
+<td style="text-align:right;">
+0.3785144
+</td>
+<td style="text-align:right;">
+-0.3096023
+</td>
+<td style="text-align:right;">
+0.7574049
+</td>
+<td style="text-align:right;">
+-0.1171889
+</td>
+<td style="text-align:right;">
+0.3785144
+</td>
+<td style="text-align:right;">
+-0.3096023
+</td>
+<td style="text-align:right;">
+0.7574049
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+asian
+</td>
+<td style="text-align:right;">
+-0.0008369
+</td>
+<td style="text-align:right;">
+0.0824013
+</td>
+<td style="text-align:right;">
+-0.0101570
+</td>
+<td style="text-align:right;">
+0.9919130
+</td>
+<td style="text-align:right;">
+-0.0008369
+</td>
+<td style="text-align:right;">
+0.0824013
+</td>
+<td style="text-align:right;">
+-0.0101570
+</td>
+<td style="text-align:right;">
+0.9919130
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+black
+</td>
+<td style="text-align:right;">
+0.4206325
+</td>
+<td style="text-align:right;">
+0.1257478
+</td>
+<td style="text-align:right;">
+3.3450488
+</td>
+<td style="text-align:right;">
+0.0011009
+</td>
+<td style="text-align:right;">
+0.4206325
+</td>
+<td style="text-align:right;">
+0.1257478
+</td>
+<td style="text-align:right;">
+3.3450488
+</td>
+<td style="text-align:right;">
+0.0011009
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+other
+</td>
+<td style="text-align:right;">
+-0.0649742
+</td>
+<td style="text-align:right;">
+0.0746259
+</td>
+<td style="text-align:right;">
+-0.8706664
+</td>
+<td style="text-align:right;">
+0.3856893
+</td>
+<td style="text-align:right;">
+-0.0649742
+</td>
+<td style="text-align:right;">
+0.0746259
+</td>
+<td style="text-align:right;">
+-0.8706664
+</td>
+<td style="text-align:right;">
+0.3856893
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+mixed
+</td>
+<td style="text-align:right;">
+-0.0005622
+</td>
+<td style="text-align:right;">
+0.0002852
+</td>
+<td style="text-align:right;">
+-1.9713209
+</td>
+<td style="text-align:right;">
+0.0510080
+</td>
+<td style="text-align:right;">
+-0.0005622
+</td>
+<td style="text-align:right;">
+0.0002852
+</td>
+<td style="text-align:right;">
+-1.9713209
+</td>
+<td style="text-align:right;">
+0.0510080
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(n_spatial_filter)vec2
+</td>
+<td style="text-align:right;">
+0.7660024
+</td>
+<td style="text-align:right;">
+0.3525986
+</td>
+<td style="text-align:right;">
+2.1724486
+</td>
+<td style="text-align:right;">
+0.0318045
+</td>
+<td style="text-align:right;">
+0.7660024
+</td>
+<td style="text-align:right;">
+0.3525986
+</td>
+<td style="text-align:right;">
+2.1724486
+</td>
+<td style="text-align:right;">
+0.0318045
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(n_spatial_filter)vec6
+</td>
+<td style="text-align:right;">
+-0.6123011
+</td>
+<td style="text-align:right;">
+0.3525986
+</td>
+<td style="text-align:right;">
+-1.7365384
+</td>
+<td style="text-align:right;">
+0.0850566
+</td>
+<td style="text-align:right;">
+-0.6123011
+</td>
+<td style="text-align:right;">
+0.3525986
+</td>
+<td style="text-align:right;">
+-1.7365384
+</td>
+<td style="text-align:right;">
+0.0850566
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(n_spatial_filter)vec1
+</td>
+<td style="text-align:right;">
+0.5496056
+</td>
+<td style="text-align:right;">
+0.3525986
+</td>
+<td style="text-align:right;">
+1.5587287
+</td>
+<td style="text-align:right;">
+0.1217162
+</td>
+<td style="text-align:right;">
+0.5496056
+</td>
+<td style="text-align:right;">
+0.3525986
+</td>
+<td style="text-align:right;">
+1.5587287
+</td>
+<td style="text-align:right;">
+0.1217162
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(n_spatial_filter)vec18
+</td>
+<td style="text-align:right;">
+0.7079633
+</td>
+<td style="text-align:right;">
+0.3525986
+</td>
+<td style="text-align:right;">
+2.0078448
+</td>
+<td style="text-align:right;">
+0.0469249
+</td>
+<td style="text-align:right;">
+0.7079633
+</td>
+<td style="text-align:right;">
+0.3525986
+</td>
+<td style="text-align:right;">
+2.0078448
+</td>
+<td style="text-align:right;">
+0.0469249
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(n_spatial_filter)vec34
+</td>
+<td style="text-align:right;">
+0.9992707
+</td>
+<td style="text-align:right;">
+0.3525986
+</td>
+<td style="text-align:right;">
+2.8340174
+</td>
+<td style="text-align:right;">
+0.0054016
+</td>
+<td style="text-align:right;">
+0.9992707
+</td>
+<td style="text-align:right;">
+0.3525986
+</td>
+<td style="text-align:right;">
+2.8340174
+</td>
+<td style="text-align:right;">
+0.0054016
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(n_spatial_filter)vec19
+</td>
+<td style="text-align:right;">
+0.6335987
+</td>
+<td style="text-align:right;">
+0.3525986
+</td>
+<td style="text-align:right;">
+1.7969402
+</td>
+<td style="text-align:right;">
+0.0748816
+</td>
+<td style="text-align:right;">
+0.6335987
+</td>
+<td style="text-align:right;">
+0.3525986
+</td>
+<td style="text-align:right;">
+1.7969402
+</td>
+<td style="text-align:right;">
+0.0748816
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(n_spatial_filter)vec3
+</td>
+<td style="text-align:right;">
+-0.4559080
+</td>
+<td style="text-align:right;">
+0.3525986
+</td>
+<td style="text-align:right;">
+-1.2929943
+</td>
+<td style="text-align:right;">
+0.1985177
+</td>
+<td style="text-align:right;">
+-0.4559080
+</td>
+<td style="text-align:right;">
+0.3525986
+</td>
+<td style="text-align:right;">
+-1.2929943
+</td>
+<td style="text-align:right;">
+0.1985177
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(n_spatial_filter)vec47
+</td>
+<td style="text-align:right;">
+0.7969061
+</td>
+<td style="text-align:right;">
+0.3525986
+</td>
+<td style="text-align:right;">
+2.2600942
+</td>
+<td style="text-align:right;">
+0.0256340
+</td>
+<td style="text-align:right;">
+0.7969061
+</td>
+<td style="text-align:right;">
+0.3525986
+</td>
+<td style="text-align:right;">
+2.2600942
+</td>
+<td style="text-align:right;">
+0.0256340
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:100%; ">
+<table class="table table-striped table-hover" style="font-size: 12px; ">
+<thead>
+<tr>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; position: sticky; top:0; background-color: #FFFFFF;" colspan="9">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+East
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Estimate
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Std. Error
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+t value
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Pr(&gt;|t|)
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Estimate
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Std. Error
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+t value
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Pr(&gt;|t|)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:right;">
+7.7045900
+</td>
+<td style="text-align:right;">
+4.7859358
+</td>
+<td style="text-align:right;">
+1.6098398
+</td>
+<td style="text-align:right;">
+0.1094040
+</td>
+<td style="text-align:right;">
+7.7045900
+</td>
+<td style="text-align:right;">
+4.7859358
+</td>
+<td style="text-align:right;">
+1.6098398
+</td>
+<td style="text-align:right;">
+0.1094040
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+age
+</td>
+<td style="text-align:right;">
+0.0118892
+</td>
+<td style="text-align:right;">
+0.0154085
+</td>
+<td style="text-align:right;">
+0.7716011
+</td>
+<td style="text-align:right;">
+0.4414888
+</td>
+<td style="text-align:right;">
+0.0118892
+</td>
+<td style="text-align:right;">
+0.0154085
+</td>
+<td style="text-align:right;">
+0.7716011
+</td>
+<td style="text-align:right;">
+0.4414888
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+life_expectancy
+</td>
+<td style="text-align:right;">
+-0.0251986
+</td>
+<td style="text-align:right;">
+0.0214599
+</td>
+<td style="text-align:right;">
+-1.1742180
+</td>
+<td style="text-align:right;">
+0.2420525
+</td>
+<td style="text-align:right;">
+-0.0251986
+</td>
+<td style="text-align:right;">
+0.0214599
+</td>
+<td style="text-align:right;">
+-1.1742180
+</td>
+<td style="text-align:right;">
+0.2420525
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+income
+</td>
+<td style="text-align:right;">
+-0.1075121
+</td>
+<td style="text-align:right;">
+0.4431103
+</td>
+<td style="text-align:right;">
+-0.2426305
+</td>
+<td style="text-align:right;">
+0.8086024
+</td>
+<td style="text-align:right;">
+-0.1075121
+</td>
+<td style="text-align:right;">
+0.4431103
+</td>
+<td style="text-align:right;">
+-0.2426305
+</td>
+<td style="text-align:right;">
+0.8086024
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+asian
+</td>
+<td style="text-align:right;">
+-0.1683068
+</td>
+<td style="text-align:right;">
+0.0735425
+</td>
+<td style="text-align:right;">
+-2.2885655
+</td>
+<td style="text-align:right;">
+0.0234130
+</td>
+<td style="text-align:right;">
+-0.1683068
+</td>
+<td style="text-align:right;">
+0.0735425
+</td>
+<td style="text-align:right;">
+-2.2885655
+</td>
+<td style="text-align:right;">
+0.0234130
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+black
+</td>
+<td style="text-align:right;">
+0.0236404
+</td>
+<td style="text-align:right;">
+0.0894777
+</td>
+<td style="text-align:right;">
+0.2642041
+</td>
+<td style="text-align:right;">
+0.7919627
+</td>
+<td style="text-align:right;">
+0.0236404
+</td>
+<td style="text-align:right;">
+0.0894777
+</td>
+<td style="text-align:right;">
+0.2642041
+</td>
+<td style="text-align:right;">
+0.7919627
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+other
+</td>
+<td style="text-align:right;">
+-0.0860340
+</td>
+<td style="text-align:right;">
+0.1009896
+</td>
+<td style="text-align:right;">
+-0.8519091
+</td>
+<td style="text-align:right;">
+0.3955379
+</td>
+<td style="text-align:right;">
+-0.0860340
+</td>
+<td style="text-align:right;">
+0.1009896
+</td>
+<td style="text-align:right;">
+-0.8519091
+</td>
+<td style="text-align:right;">
+0.3955379
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+mixed
+</td>
+<td style="text-align:right;">
+0.0005186
+</td>
+<td style="text-align:right;">
+0.0002796
+</td>
+<td style="text-align:right;">
+1.8548388
+</td>
+<td style="text-align:right;">
+0.0654595
+</td>
+<td style="text-align:right;">
+0.0005186
+</td>
+<td style="text-align:right;">
+0.0002796
+</td>
+<td style="text-align:right;">
+1.8548388
+</td>
+<td style="text-align:right;">
+0.0654595
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(e_spatial_filter)vec8
+</td>
+<td style="text-align:right;">
+1.1460230
+</td>
+<td style="text-align:right;">
+0.4047321
+</td>
+<td style="text-align:right;">
+2.8315591
+</td>
+<td style="text-align:right;">
+0.0052275
+</td>
+<td style="text-align:right;">
+1.1460230
+</td>
+<td style="text-align:right;">
+0.4047321
+</td>
+<td style="text-align:right;">
+2.8315591
+</td>
+<td style="text-align:right;">
+0.0052275
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(e_spatial_filter)vec9
+</td>
+<td style="text-align:right;">
+-1.1612723
+</td>
+<td style="text-align:right;">
+0.4047321
+</td>
+<td style="text-align:right;">
+-2.8692368
+</td>
+<td style="text-align:right;">
+0.0046706
+</td>
+<td style="text-align:right;">
+-1.1612723
+</td>
+<td style="text-align:right;">
+0.4047321
+</td>
+<td style="text-align:right;">
+-2.8692368
+</td>
+<td style="text-align:right;">
+0.0046706
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(e_spatial_filter)vec13
+</td>
+<td style="text-align:right;">
+-1.1268684
+</td>
+<td style="text-align:right;">
+0.4047321
+</td>
+<td style="text-align:right;">
+-2.7842324
+</td>
+<td style="text-align:right;">
+0.0060127
+</td>
+<td style="text-align:right;">
+-1.1268684
+</td>
+<td style="text-align:right;">
+0.4047321
+</td>
+<td style="text-align:right;">
+-2.7842324
+</td>
+<td style="text-align:right;">
+0.0060127
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(e_spatial_filter)vec17
+</td>
+<td style="text-align:right;">
+-1.0898204
+</td>
+<td style="text-align:right;">
+0.4047321
+</td>
+<td style="text-align:right;">
+-2.6926954
+</td>
+<td style="text-align:right;">
+0.0078425
+</td>
+<td style="text-align:right;">
+-1.0898204
+</td>
+<td style="text-align:right;">
+0.4047321
+</td>
+<td style="text-align:right;">
+-2.6926954
+</td>
+<td style="text-align:right;">
+0.0078425
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fitted(e_spatial_filter)vec1
+</td>
+<td style="text-align:right;">
+0.3395594
+</td>
+<td style="text-align:right;">
+0.4047321
+</td>
+<td style="text-align:right;">
+0.8389732
+</td>
+<td style="text-align:right;">
+0.4027361
+</td>
+<td style="text-align:right;">
+0.3395594
+</td>
+<td style="text-align:right;">
+0.4047321
+</td>
+<td style="text-align:right;">
+0.8389732
+</td>
+<td style="text-align:right;">
+0.4027361
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="lagrange-multiplier-diagnostics-for-spatial-dependence" class="section level3" number="7.6.1">
+<h3><span class="header-section-number">7.6.1</span> Lagrange Multiplier Diagnostics for Spatial Dependence</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+London
+</th>
+<th style="text-align:left;">
+North
+</th>
+<th style="text-align:left;">
+East
+</th>
+<th style="text-align:left;">
+West
+</th>
+<th style="text-align:left;">
+South
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+LMlag
+</td>
+<td style="text-align:left;">
+56.262
+</td>
+<td style="text-align:left;">
+7.5719
+</td>
+<td style="text-align:left;">
+7.2718
+</td>
+<td style="text-align:left;">
+1.85E+01
+</td>
+<td style="text-align:left;">
+0.96829
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+p-Value (LMlag)
+</td>
+<td style="text-align:left;">
+6.34E-14
+</td>
+<td style="text-align:left;">
+0.005928
+</td>
+<td style="text-align:left;">
+0.007005
+</td>
+<td style="text-align:left;">
+1.73E-05
+</td>
+<td style="text-align:left;">
+0.3251
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LMerr
+</td>
+<td style="text-align:left;">
+52.139
+</td>
+<td style="text-align:left;">
+2.5679
+</td>
+<td style="text-align:left;">
+5.2787
+</td>
+<td style="text-align:left;">
+13.204
+</td>
+<td style="text-align:left;">
+0.36006
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+p-Value (LMerr)
+</td>
+<td style="text-align:left;">
+5.17E-13
+</td>
+<td style="text-align:left;">
+0.1091
+</td>
+<td style="text-align:left;">
+0.02159
+</td>
+<td style="text-align:left;">
+0.0002793
+</td>
+<td style="text-align:left;">
+0.5485
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RLMlag
+</td>
+<td style="text-align:left;">
+4.1866
+</td>
+<td style="text-align:left;">
+11.009
+</td>
+<td style="text-align:left;">
+3.1031
+</td>
+<td style="text-align:left;">
+6.2264
+</td>
+<td style="text-align:left;">
+2.7989
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+p-Value (RLMlag)
+</td>
+<td style="text-align:left;">
+0.04074
+</td>
+<td style="text-align:left;">
+0.0009069
+</td>
+<td style="text-align:left;">
+0.07814
+</td>
+<td style="text-align:left;">
+0.01259
+</td>
+<td style="text-align:left;">
+0.09433
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RLMerr
+</td>
+<td style="text-align:left;">
+0.063807
+</td>
+<td style="text-align:left;">
+6.0046
+</td>
+<td style="text-align:left;">
+1.11
+</td>
+<td style="text-align:left;">
+0.96381
+</td>
+<td style="text-align:left;">
+2.1907
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+p-Value (RLMerr)
+</td>
+<td style="text-align:left;">
+0.8006
+</td>
+<td style="text-align:left;">
+0.01427
+</td>
+<td style="text-align:left;">
+0.2921
+</td>
+<td style="text-align:left;">
+0.3262
+</td>
+<td style="text-align:left;">
+0.1388
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="discussion-and-conclusions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["group_5_report_bookdown.pdf", "group_5_report_bookdown.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

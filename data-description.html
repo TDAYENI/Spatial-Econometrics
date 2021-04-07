@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Data Description | Modelling correlation between access to green space and demographic and health variables in London.</title>
+  <meta name="description" content="Chapter 2 Data Description | Modelling correlation between access to green space and demographic and health variables in London." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Data Description | Modelling correlation between access to green space and demographic and health variables in London." />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Data Description | Modelling correlation between access to green space and demographic and health variables in London." />
+  
+  
+  
+
+<meta name="author" content="Titilayo Ayeni, Shenzhangyin Yang, Niamh French, James Edwards" />
+
+
+<meta name="date" content="2021-01-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="exploratory-spatial-data-analysis.html"/>
+<script src="libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+CEGE0097 Group Coursework
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="data-description.html"><a href="data-description.html"><i class="fa fa-check"></i><b>2</b> Data Description</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="data-description.html"><a href="data-description.html#green-space-data"><i class="fa fa-check"></i><b>2.1</b> Green Space Data</a></li>
+<li class="chapter" data-level="2.2" data-path="data-description.html"><a href="data-description.html#demographic-data"><i class="fa fa-check"></i><b>2.2</b> Demographic Data</a></li>
+<li class="chapter" data-level="2.3" data-path="data-description.html"><a href="data-description.html#data-multicollinearity"><i class="fa fa-check"></i><b>2.3</b> Data Multicollinearity</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html"><i class="fa fa-check"></i><b>3</b> Exploratory Spatial Data Analysis</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#london-greenspace-distribution"><i class="fa fa-check"></i><b>3.1</b> London Greenspace distribution</a></li>
+<li class="chapter" data-level="3.2" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#demographic-distribution-across-london"><i class="fa fa-check"></i><b>3.2</b> Demographic distribution across London</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#income"><i class="fa fa-check"></i><b>3.2.1</b> Income</a></li>
+<li class="chapter" data-level="3.2.2" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#age"><i class="fa fa-check"></i><b>3.2.2</b> Age</a></li>
+<li class="chapter" data-level="3.2.3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#life-expectancy"><i class="fa fa-check"></i><b>3.2.3</b> Life Expectancy</a></li>
+<li class="chapter" data-level="3.2.4" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#ethnicity"><i class="fa fa-check"></i><b>3.2.4</b> Ethnicity</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#spatial-autocorrelation"><i class="fa fa-check"></i><b>3.3</b> Spatial Autocorrelation</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#global-morans-i"><i class="fa fa-check"></i><b>3.3.1</b> Global Moran’s I</a></li>
+<li class="chapter" data-level="3.3.2" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#local-morans-i"><i class="fa fa-check"></i><b>3.3.2</b> Local Moran’s I</a></li>
+<li class="chapter" data-level="3.3.3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#semivariogram"><i class="fa fa-check"></i><b>3.3.3</b> Semivariogram</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="methodology.html"><a href="methodology.html"><i class="fa fa-check"></i><b>4</b> Methodology</a></li>
+<li class="chapter" data-level="5" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>5</b> Results</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="results.html"><a href="results.html#ols"><i class="fa fa-check"></i><b>5.1</b> OLS</a></li>
+<li class="chapter" data-level="5.2" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.2</b> Shapiro-Wilk Normality Test</a></li>
+<li class="chapter" data-level="5.3" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.3</b> Moran’s I on OLS residuals</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="results.html"><a href="results.html#south"><i class="fa fa-check"></i><b>5.3.1</b> South</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="results.html"><a href="results.html#lagrange-multiplier-tests"><i class="fa fa-check"></i><b>5.4</b> Lagrange Multiplier Tests</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="results.html"><a href="results.html#london"><i class="fa fa-check"></i><b>5.4.1</b> London</a></li>
+<li class="chapter" data-level="5.4.2" data-path="results.html"><a href="results.html#north"><i class="fa fa-check"></i><b>5.4.2</b> North</a></li>
+<li class="chapter" data-level="5.4.3" data-path="results.html"><a href="results.html#east-and-west"><i class="fa fa-check"></i><b>5.4.3</b> East and West</a></li>
+<li class="chapter" data-level="5.4.4" data-path="results.html"><a href="results.html#south-1"><i class="fa fa-check"></i><b>5.4.4</b> South</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5</b> Spatial Regression Models</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.1</b> Spatial Lag Model</a></li>
+<li class="chapter" data-level="5.5.2" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.2</b> Spatial Error Model</a></li>
+<li class="chapter" data-level="5.5.3" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.3</b> Spatial Durbin</a></li>
+<li class="chapter" data-level="5.5.4" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.4</b> GWR</a></li>
+<li class="chapter" data-level="5.5.5" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.5</b> OLS and Spatial Filtering</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html"><i class="fa fa-check"></i><b>6</b> Discussion and Conclusions</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#model-selection"><i class="fa fa-check"></i><b>6.1</b> Model Selection</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#greater-london"><i class="fa fa-check"></i><b>6.1.1</b> Greater London</a></li>
+<li class="chapter" data-level="6.1.2" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#north-london"><i class="fa fa-check"></i><b>6.1.2</b> North London</a></li>
+<li class="chapter" data-level="6.1.3" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#east-london"><i class="fa fa-check"></i><b>6.1.3</b> East London</a></li>
+<li class="chapter" data-level="6.1.4" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#west-london"><i class="fa fa-check"></i><b>6.1.4</b> West London</a></li>
+<li class="chapter" data-level="6.1.5" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#south-london"><i class="fa fa-check"></i><b>6.1.5</b> South London</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#limitations-and-future-work"><i class="fa fa-check"></i><b>6.2</b> Limitations and future work</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i><b>7</b> Appendix</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="appendix.html"><a href="appendix.html#ordinary-least-squares-ols-results"><i class="fa fa-check"></i><b>7.1</b> Ordinary Least Squares (OLS) Results</a></li>
+<li class="chapter" data-level="7.2" data-path="appendix.html"><a href="appendix.html#spatial-lag-results"><i class="fa fa-check"></i><b>7.2</b> Spatial Lag Results</a></li>
+<li class="chapter" data-level="7.3" data-path="appendix.html"><a href="appendix.html#spatial-error-results"><i class="fa fa-check"></i><b>7.3</b> Spatial Error Results</a></li>
+<li class="chapter" data-level="7.4" data-path="appendix.html"><a href="appendix.html#spatial-durbin-results"><i class="fa fa-check"></i><b>7.4</b> Spatial Durbin Results</a></li>
+<li class="chapter" data-level="7.5" data-path="appendix.html"><a href="appendix.html#geographically-weighted-regression-results"><i class="fa fa-check"></i><b>7.5</b> Geographically Weighted Regression Results</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="appendix.html"><a href="appendix.html#shapiro-wilk-normality-tests-before-normalisation"><i class="fa fa-check"></i><b>7.5.1</b> Shapiro-Wilk Normality Tests before normalisation</a></li>
+<li class="chapter" data-level="7.5.2" data-path="appendix.html"><a href="appendix.html#shapiro-wilk-normality-test-after-normalisation"><i class="fa fa-check"></i><b>7.5.2</b> Shapiro-Wilk Normality Test after normalisation</a></li>
+<li class="chapter" data-level="7.5.3" data-path="appendix.html"><a href="appendix.html#shapiro-wlike-normality-test-for-ols-residuals"><i class="fa fa-check"></i><b>7.5.3</b> Shapiro-Wlike Normality Test for OLS Residuals</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="appendix.html"><a href="appendix.html#ols-with-spatial-filtering-results"><i class="fa fa-check"></i><b>7.6</b> OLS with Spatial Filtering Results</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="appendix.html"><a href="appendix.html#lagrange-multiplier-diagnostics-for-spatial-dependence"><i class="fa fa-check"></i><b>7.6.1</b> Lagrange Multiplier Diagnostics for Spatial Dependence</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>8</b> References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Modelling correlation between access to green space and demographic and health variables in London.</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="data-description" class="section level1" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Data Description</h1>
+<div id="green-space-data" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Green Space Data</h2>
+<p>There are a number of ways to measure access to green space, each with their own limitations. For this study, the percentage of ward land area used for green space was taken as a proxy for access to green space for residents in that ward. The limitations of this proxy are discussed in detail later in this report. The data for this proxy was sourced from <span class="citation"><a href="references.html#ref-datastore_land_2005" role="doc-biblioref">Ministry of Housing</a> (<a href="references.html#ref-datastore_land_2005" role="doc-biblioref">2005</a>)</span>. This is part of the Generalised Land Use Database published by the Ministry of Housing, Communities &amp; Local Government (MHCLG) in 2005. The dataset includes two forms of data: the land area of each London ward and the percentage of this area used for each possible land use. A clear pattern in the spatial distribution (Figure <a href="data-description.html#fig:FigureA">2.1</a>) of this data is the greater percentage of green space per ward in the ‘Green-Belt’ of suburban London (a statutory ring of green areas surrounding the capital). This is particularly clear in East and West London.</p>
+<div class="figure"><span id="fig:FigureA"></span>
+<img src="group_5_report_bookdown_files/figure-html/FigureA-1.png" alt="% of green space per ward in Greater London" width="672" />
+<p class="caption">
+Figure 2.1: % of green space per ward in Greater London
+</p>
+</div>
+<div class="figure"><span id="fig:FigureB"></span>
+<img src="group_5_report_bookdown_files/figure-html/FigureB-1.png" alt="Histogram of % of green space per ward in Greater London" width="672" />
+<p class="caption">
+Figure 2.2: Histogram of % of green space per ward in Greater London
+</p>
+</div>
+<p>Figure <a href="data-description.html#fig:FigureB">2.2</a> shows that the data is not normally distributed, which could reduce the integrity of our models. The data can be normalised by taking the natural logarithm of the percentage of the area used after finding the sum of twelve and the variable (ln(green space + 12)). The result is shown in Figure <a href="data-description.html#fig:FigureC">2.3</a>.</p>
+<div class="figure"><span id="fig:FigureC"></span>
+<img src="group_5_report_bookdown_files/figure-html/FigureC-1.png" alt="Histogram of normalised % of green space per ward in Greater London" width="672" />
+<p class="caption">
+Figure 2.3: Histogram of normalised % of green space per ward in Greater London
+</p>
+</div>
+<p>It is important to note the limitation of the measure of access to green space used in this study, particularly the lack of consideration of network access, or access to green space in neighbouring wards. A number of datasets were considered for the study. A possible choice was a dataset Access to Public Open Space and Nature (<span class="citation"><a href="references.html#ref-datastore_access_2015" role="doc-biblioref">Greater London CIC (GiGL)</a> (<a href="references.html#ref-datastore_access_2015" role="doc-biblioref">2015</a>)</span>). This dataset contains the percentage of residential households per ward that have sufficient access to green space in line with UK governmental standards (<span class="citation"><a href="references.html#ref-mayor_of_london_2017" role="doc-biblioref">London</a> (<a href="references.html#ref-mayor_of_london_2017" role="doc-biblioref">2017</a>)</span>). However, this data was found to be extremely skewed, which made it impossible to define an appropriate model. After analysis of a number of other data sources, the source used in this study was decided to be most appropriate.</p>
+</div>
+<div id="demographic-data" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Demographic Data</h2>
+<p>After a literature review, a shortlist was created containing independent variables likely to be significantly correlated with access to green space. These were all aggregate statistics for wards including average income, average age, ethnicity, average wellbeing and average life expectancy. The data for these variables was sourced from the UK 2011 Census dataset (<span class="citation"><a href="references.html#ref-noauthor_census_2011" role="doc-biblioref">National Statistics</a> (<a href="references.html#ref-noauthor_census_2011" role="doc-biblioref">2011</a>)</span>). The UK Office for National Statistics provided a rigorous data collection system to capture the data on the questionnaires, interpret it and confirm it, making the census data trustworthy and reliable. As the data for these variables share a source, they are consistent in time. However, since these data were collected ten years ago, they may no longer be representative. The census data required refining and cleaning before use. Unnecessary data was removed and the data was examined for null values. The data was then compiled in a comma separated values file for use in R. This file was joined to a shapefile of London ward boundaries, producing a shapefile containing geographic boundaries, demographic and health information. The following variables required transformation with a natural logarithm in order to fit a normal distribution: number of Black people in the ward, number of Asian people in the ward, average income of the ward, number of people of ‘Other’ ethnicity.</p>
+</div>
+<div id="data-multicollinearity" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Data Multicollinearity</h2>
+<p>Multicollinearity refers to the precise correlation or high correlation between explanatory variables in the linear regression model (<span class="citation"><a href="references.html#ref-daoud_multicollinearity_2017" role="doc-biblioref">Daoud</a> (<a href="references.html#ref-daoud_multicollinearity_2017" role="doc-biblioref">2017</a>)</span>). Multicollinearity between independent variables may significantly reduce the regression model’s fit. Figure <a href="data-description.html#fig:multicollinearity">2.4</a> and Table <a href="data-description.html#tab:VIF">2.1</a> show the correlation between independent variables, and the VIF values for independent variables, respectively.</p>
+<div class="figure"><span id="fig:multicollinearity"></span>
+<img src="group_5_report_bookdown_files/figure-html/multicollinearity-1.png" alt="Correlation matrix for dependent variables." width="672" />
+<p class="caption">
+Figure 2.4: Correlation matrix for dependent variables.
+</p>
+</div>
+<table>
+<caption>
+<span id="tab:VIF">Table 2.1: </span>VIF values for independent variables
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Independent variable
+</th>
+<th style="text-align:left;">
+VIF
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+age
+</td>
+<td style="text-align:left;">
+2.628899
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+life expectancy
+</td>
+<td style="text-align:left;">
+2.142507
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+income
+</td>
+<td style="text-align:left;">
+2.971197
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+asian
+</td>
+<td style="text-align:left;">
+1.779267
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+black
+</td>
+<td style="text-align:left;">
+6.177844
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+mixed
+</td>
+<td style="text-align:left;">
+3.613875
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+other
+</td>
+<td style="text-align:left;">
+2.365799
+</td>
+</tr>
+</tbody>
+</table>
+<p>The results of tests for multicollinearity revealed high correlations between a number of the independent variables. In general, the correlation coefficient between 0 and 0.5 means that the model is less likely to have multicollinearity problems, while the correlation coefficient between 0.5 and 1 means that the model may have serious multicollinearity problems. If the VIF is greater than 5, there could be obvious multicollinearity in the model (<span class="citation"><a href="references.html#ref-daoud_multicollinearity_2017" role="doc-biblioref">Daoud</a> (<a href="references.html#ref-daoud_multicollinearity_2017" role="doc-biblioref">2017</a>)</span>). Combined with these two parameters, the data of wellbeing and white ethnicity were removed to reduce the multicollinearity.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="exploratory-spatial-data-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["group_5_report_bookdown.pdf", "group_5_report_bookdown.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

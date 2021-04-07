@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 8 References | Modelling correlation between access to green space and demographic and health variables in London.</title>
+  <meta name="description" content="Chapter 8 References | Modelling correlation between access to green space and demographic and health variables in London." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 8 References | Modelling correlation between access to green space and demographic and health variables in London." />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 8 References | Modelling correlation between access to green space and demographic and health variables in London." />
+  
+  
+  
+
+<meta name="author" content="Titilayo Ayeni, Shenzhangyin Yang, Niamh French, James Edwards" />
+
+
+<meta name="date" content="2021-01-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="appendix.html"/>
+
+<script src="libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+CEGE0097 Group Coursework
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="data-description.html"><a href="data-description.html"><i class="fa fa-check"></i><b>2</b> Data Description</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="data-description.html"><a href="data-description.html#green-space-data"><i class="fa fa-check"></i><b>2.1</b> Green Space Data</a></li>
+<li class="chapter" data-level="2.2" data-path="data-description.html"><a href="data-description.html#demographic-data"><i class="fa fa-check"></i><b>2.2</b> Demographic Data</a></li>
+<li class="chapter" data-level="2.3" data-path="data-description.html"><a href="data-description.html#data-multicollinearity"><i class="fa fa-check"></i><b>2.3</b> Data Multicollinearity</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html"><i class="fa fa-check"></i><b>3</b> Exploratory Spatial Data Analysis</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#london-greenspace-distribution"><i class="fa fa-check"></i><b>3.1</b> London Greenspace distribution</a></li>
+<li class="chapter" data-level="3.2" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#demographic-distribution-across-london"><i class="fa fa-check"></i><b>3.2</b> Demographic distribution across London</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#income"><i class="fa fa-check"></i><b>3.2.1</b> Income</a></li>
+<li class="chapter" data-level="3.2.2" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#age"><i class="fa fa-check"></i><b>3.2.2</b> Age</a></li>
+<li class="chapter" data-level="3.2.3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#life-expectancy"><i class="fa fa-check"></i><b>3.2.3</b> Life Expectancy</a></li>
+<li class="chapter" data-level="3.2.4" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#ethnicity"><i class="fa fa-check"></i><b>3.2.4</b> Ethnicity</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#spatial-autocorrelation"><i class="fa fa-check"></i><b>3.3</b> Spatial Autocorrelation</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#global-morans-i"><i class="fa fa-check"></i><b>3.3.1</b> Global Moran’s I</a></li>
+<li class="chapter" data-level="3.3.2" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#local-morans-i"><i class="fa fa-check"></i><b>3.3.2</b> Local Moran’s I</a></li>
+<li class="chapter" data-level="3.3.3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#semivariogram"><i class="fa fa-check"></i><b>3.3.3</b> Semivariogram</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="methodology.html"><a href="methodology.html"><i class="fa fa-check"></i><b>4</b> Methodology</a></li>
+<li class="chapter" data-level="5" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>5</b> Results</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="results.html"><a href="results.html#ols"><i class="fa fa-check"></i><b>5.1</b> OLS</a></li>
+<li class="chapter" data-level="5.2" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.2</b> Shapiro-Wilk Normality Test</a></li>
+<li class="chapter" data-level="5.3" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.3</b> Moran’s I on OLS residuals</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="results.html"><a href="results.html#south"><i class="fa fa-check"></i><b>5.3.1</b> South</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="results.html"><a href="results.html#lagrange-multiplier-tests"><i class="fa fa-check"></i><b>5.4</b> Lagrange Multiplier Tests</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="results.html"><a href="results.html#london"><i class="fa fa-check"></i><b>5.4.1</b> London</a></li>
+<li class="chapter" data-level="5.4.2" data-path="results.html"><a href="results.html#north"><i class="fa fa-check"></i><b>5.4.2</b> North</a></li>
+<li class="chapter" data-level="5.4.3" data-path="results.html"><a href="results.html#east-and-west"><i class="fa fa-check"></i><b>5.4.3</b> East and West</a></li>
+<li class="chapter" data-level="5.4.4" data-path="results.html"><a href="results.html#south-1"><i class="fa fa-check"></i><b>5.4.4</b> South</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5</b> Spatial Regression Models</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.1</b> Spatial Lag Model</a></li>
+<li class="chapter" data-level="5.5.2" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.2</b> Spatial Error Model</a></li>
+<li class="chapter" data-level="5.5.3" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.3</b> Spatial Durbin</a></li>
+<li class="chapter" data-level="5.5.4" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.4</b> GWR</a></li>
+<li class="chapter" data-level="5.5.5" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.5</b> OLS and Spatial Filtering</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html"><i class="fa fa-check"></i><b>6</b> Discussion and Conclusions</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#model-selection"><i class="fa fa-check"></i><b>6.1</b> Model Selection</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#greater-london"><i class="fa fa-check"></i><b>6.1.1</b> Greater London</a></li>
+<li class="chapter" data-level="6.1.2" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#north-london"><i class="fa fa-check"></i><b>6.1.2</b> North London</a></li>
+<li class="chapter" data-level="6.1.3" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#east-london"><i class="fa fa-check"></i><b>6.1.3</b> East London</a></li>
+<li class="chapter" data-level="6.1.4" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#west-london"><i class="fa fa-check"></i><b>6.1.4</b> West London</a></li>
+<li class="chapter" data-level="6.1.5" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#south-london"><i class="fa fa-check"></i><b>6.1.5</b> South London</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#limitations-and-future-work"><i class="fa fa-check"></i><b>6.2</b> Limitations and future work</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i><b>7</b> Appendix</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="appendix.html"><a href="appendix.html#ordinary-least-squares-ols-results"><i class="fa fa-check"></i><b>7.1</b> Ordinary Least Squares (OLS) Results</a></li>
+<li class="chapter" data-level="7.2" data-path="appendix.html"><a href="appendix.html#spatial-lag-results"><i class="fa fa-check"></i><b>7.2</b> Spatial Lag Results</a></li>
+<li class="chapter" data-level="7.3" data-path="appendix.html"><a href="appendix.html#spatial-error-results"><i class="fa fa-check"></i><b>7.3</b> Spatial Error Results</a></li>
+<li class="chapter" data-level="7.4" data-path="appendix.html"><a href="appendix.html#spatial-durbin-results"><i class="fa fa-check"></i><b>7.4</b> Spatial Durbin Results</a></li>
+<li class="chapter" data-level="7.5" data-path="appendix.html"><a href="appendix.html#geographically-weighted-regression-results"><i class="fa fa-check"></i><b>7.5</b> Geographically Weighted Regression Results</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="appendix.html"><a href="appendix.html#shapiro-wilk-normality-tests-before-normalisation"><i class="fa fa-check"></i><b>7.5.1</b> Shapiro-Wilk Normality Tests before normalisation</a></li>
+<li class="chapter" data-level="7.5.2" data-path="appendix.html"><a href="appendix.html#shapiro-wilk-normality-test-after-normalisation"><i class="fa fa-check"></i><b>7.5.2</b> Shapiro-Wilk Normality Test after normalisation</a></li>
+<li class="chapter" data-level="7.5.3" data-path="appendix.html"><a href="appendix.html#shapiro-wlike-normality-test-for-ols-residuals"><i class="fa fa-check"></i><b>7.5.3</b> Shapiro-Wlike Normality Test for OLS Residuals</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="appendix.html"><a href="appendix.html#ols-with-spatial-filtering-results"><i class="fa fa-check"></i><b>7.6</b> OLS with Spatial Filtering Results</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="appendix.html"><a href="appendix.html#lagrange-multiplier-diagnostics-for-spatial-dependence"><i class="fa fa-check"></i><b>7.6.1</b> Lagrange Multiplier Diagnostics for Spatial Dependence</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>8</b> References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Modelling correlation between access to green space and demographic and health variables in London.</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="references" class="section level1" number="8">
+<h1><span class="header-section-number">Chapter 8</span> References</h1>
+
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-astell-burt_low-income_2014" class="csl-entry">
+Astell-Burt, Thomas, Xiaoqi Feng, Suzanne Mavoa, Hannah M Badland, and Billie Giles-Corti. 2014. <span>“Do Low-Income Neighbourhoods Have the Least Green Space? A Cross-Sectional Study of Australia’s Most Populous Cities.”</span> <em><span>BMC</span> Public Health</em> 14 (1): 292. <a href="https://doi.org/10.1186/1471-2458-14-292">https://doi.org/10.1186/1471-2458-14-292</a>.
+</div>
+<div id="ref-barbosa_who_2007" class="csl-entry">
+Barbosa, Olga, Jamie A. Tratalos, Paul R. Armsworth, Richard G. Davies, Richard A. Fuller, Pat Johnson, and Kevin J. Gaston. 2007. <span>“Who Benefits from Access to Green Space? <span>A</span> Case Study from <span>Sheffield</span>, <span>UK</span>.”</span> <em>Landscape and Urban Planning</em> 83 (2): 187–95. <a href="https://doi.org/10.1016/j.landurbplan.2007.04.004">https://doi.org/10.1016/j.landurbplan.2007.04.004</a>.
+</div>
+<div id="ref-bivand_spdep_2007" class="csl-entry">
+Bivand, Roger. 2007. <span>“The Spdep Package: Comprehensive <span>R</span> Archive Network. <span>Version</span> 0.7-8.”</span> Comprehensive R Archive Network. <a href="http://ftp.uni-bayreuth.de/math/statlib/R/CRAN/doc/packages/spdep.pdf">http://ftp.uni-bayreuth.de/math/statlib/R/CRAN/doc/packages/spdep.pdf</a>.
+</div>
+<div id="ref-brunsdon_geographical_2008" class="csl-entry">
+Brunsdon, Chris. 2008. <span>“Geographical Statistics and the Grid: Grid-Enabled Modelling of Local and Global Geographies.”</span>
+</div>
+<div id="ref-chi_spatial_2008" class="csl-entry">
+Chi, Guangqing, and Jun Zhu. 2008. <span>“Spatial Regression Models for Demographic Analysis.”</span> <em>Population Research and Policy Review</em> 27 (1): 17–42. <a href="https://doi.org/10.1007/s11113-007-9051-8">https://doi.org/10.1007/s11113-007-9051-8</a>.
+</div>
+<div id="ref-choi_supporting_2016" class="csl-entry">
+Choi, Junyoung, Myunghwa Hwang, Gayeon Kim, Janghwan Seong, and Jaeseong Ahn. 2016. <span>“Supporting the Measurement of the <span>United</span> <span>Nations</span>’ Sustainable Development Goal 11 Through the Use of National Urban Information Systems and Open Geospatial Technologies: A Case Study of South <span>Korea</span>.”</span> <em>Open Geospatial Data, Software and Standards</em> 1 (1): 4. <a href="https://doi.org/10.1186/s40965-016-0005-0">https://doi.org/10.1186/s40965-016-0005-0</a>.
+</div>
+<div id="ref-comber_using_2008" class="csl-entry">
+Comber, Alexis, Chris Brunsdon, and Edmund Green. 2008. <span>“Using a <span>GIS</span>-Based Network Analysis to Determine Urban Greenspace Accessibility for Different Ethnic and Religious Groups.”</span> <em>Landscape and Urban Planning</em> 86 (1): 103–14. <a href="https://doi.org/10.1016/j.landurbplan.2008.01.002">https://doi.org/10.1016/j.landurbplan.2008.01.002</a>.
+</div>
+<div id="ref-dai_racialethnic_2011" class="csl-entry">
+Dai, Dajun. 2011. <span>“Racial/Ethnic and Socioeconomic Disparities in Urban Green Space Accessibility: <span>Where</span> to Intervene?”</span> <em>Landscape and Urban Planning</em> 102 (4): 234–44. <a href="https://doi.org/10.1016/j.landurbplan.2011.05.002">https://doi.org/10.1016/j.landurbplan.2011.05.002</a>.
+</div>
+<div id="ref-daoud_multicollinearity_2017" class="csl-entry">
+Daoud, Jamal I. 2017. <span>“Multicollinearity and Regression Analysis.”</span> <em>Journal of Physics: Conference Series</em> 949 (December): 012009. <a href="https://doi.org/10.1088/1742-6596/949/1/012009">https://doi.org/10.1088/1742-6596/949/1/012009</a>.
+</div>
+<div id="ref-de_ridder_integrated_2004" class="csl-entry">
+De Ridder, K., V. Adamec, A. Bañuelos, M. Bruse, M. Bürger, O. Damsgaard, J. Dufek, et al. 2004. <span>“An Integrated Methodology to Assess the Benefits of Urban Green Space.”</span> <em>Science of The Total Environment</em>, Highway and <span>Urban</span> <span>Pollution</span>, 334-335 (December): 489–97. <a href="https://doi.org/10.1016/j.scitotenv.2004.04.054">https://doi.org/10.1016/j.scitotenv.2004.04.054</a>.
+</div>
+<div id="ref-douglas_green_2017" class="csl-entry">
+Douglas, Owen, Mick Lennon, and Mark Scott. 2017. <span>“Green Space Benefits for Health and Well-Being: <span>A</span> Life-Course Approach for Urban Planning, Design and Management.”</span> <em>Cities</em> 66 (June): 53–62. <a href="https://doi.org/10.1016/j.cities.2017.03.011">https://doi.org/10.1016/j.cities.2017.03.011</a>.
+</div>
+<div id="ref-fabozzi_basics_2014" class="csl-entry">
+Fabozzi, Frank J., Sergio M. Focardi, Svetlozar T. Rachev, and Bala G. Arshanapalli. 2014. <em>The <span>Basics</span> of <span>Financial</span> <span>Econometrics</span>: <span>Tools</span>, <span>Concepts</span>, and <span>Asset</span> <span>Management</span> <span>Applications</span></em>. John Wiley &amp; Sons.
+</div>
+<div id="ref-farrar_multicollinearity_1967" class="csl-entry">
+Farrar, Donald E., and Robert R. Glauber. 1967. <span>“Multicollinearity in <span>Regression</span> <span>Analysis</span>: <span>The</span> <span>Problem</span> <span>Revisited</span>.”</span> <em>The Review of Economics and Statistics</em> 49 (1): 92–107. <a href="https://doi.org/10.2307/1937887">https://doi.org/10.2307/1937887</a>.
+</div>
+<div id="ref-getis_comparative_2002" class="csl-entry">
+Getis, Arthur, and Daniel A. Griffith. 2002. <span>“Comparative Spatial Filtering in Regression Analysis.”</span> <em>Geographical Analysis</em> 34 (2): 130–40. <a href="https://doi.org/10.1111/j.1538-4632.2002.tb01080.x">https://doi.org/10.1111/j.1538-4632.2002.tb01080.x</a>.
+</div>
+<div id="ref-goodchild_scale_2011" class="csl-entry">
+Goodchild, Michael F. 2011. <span>“Scale in <span>GIS</span>: <span>An</span> Overview.”</span> <em>Geomorphology</em>, Scale <span>Issues</span> in <span>Geomorphology</span>, 130 (1): 5–9. <a href="https://doi.org/10.1016/j.geomorph.2010.10.004">https://doi.org/10.1016/j.geomorph.2010.10.004</a>.
+</div>
+<div id="ref-datastore_access_2015" class="csl-entry">
+Greater London CIC (GiGL), Greenspace Information for. 2015. <span>“Access to Public Open Space and Nature by Ward.”</span> 2015. <a href="https://data.london.gov.uk/dataset/access-public-open-space-and-nature-ward">https://data.london.gov.uk/dataset/access-public-open-space-and-nature-ward</a>.
+</div>
+<div id="ref-greenspace_information_for_greater_london_access_2015" class="csl-entry">
+Greenspace Information for Greater London, London Datastore. 2015. <span>“Access to <span>Public</span> <span>Open</span> <span>Space</span> and <span>Nature</span> by <span>Ward</span>.”</span> <a href="https://data.london.gov.uk/download/access-public-open-space-and-nature-ward/18fc0bef-68af-42c1-b77c-d6babbb66465/access-public-open-space-ward.xls">https://data.london.gov.uk/download/access-public-open-space-and-nature-ward/18fc0bef-68af-42c1-b77c-d6babbb66465/access-public-open-space-ward.xls</a>.
+</div>
+<div id="ref-griffith_non-standard_2011" class="csl-entry">
+Griffith, Daniel A., and Jean H. P. Paelinck. 2011. <em>Non-Standard Spatial Statistics and Spatial Econometrics</em>. Advances in Geographic Information Science. Heidelberg: Springer.
+</div>
+<div id="ref-haining_spatial_2003-1" class="csl-entry">
+Haining, Robert P. 2003. <em>Spatial Data Analysis: Theory and Practice</em>. Cambridge, <span>UK</span> ; New York: Cambridge University Press.
+</div>
+<div id="ref-heynen_political_2006" class="csl-entry">
+Heynen, Nik, Harold A. Perkins, and Parama Roy. 2006. <span>“The Political Ecology of Uneven Urban Green Space: The Impact of Political Economy on Race and Ethnicity in Producing Environmental Inequality in Milwaukee.”</span> <em>Urban Affairs Review</em> 42 (1): 3–25. <a href="https://doi.org/10.1177/1078087406290729">https://doi.org/10.1177/1078087406290729</a>.
+</div>
+<div id="ref-houlden_spatial_2019-1" class="csl-entry">
+Houlden, Victoria, João Porto de Albuquerque, Scott Weich, and Stephen Jarvis. 2019. <span>“A Spatial Analysis of Proximate Greenspace and Mental Wellbeing in London.”</span> <em>Applied Geography</em> 109 (August): 102036. <a href="https://doi.org/10.1016/j.apgeog.2019.102036">https://doi.org/10.1016/j.apgeog.2019.102036</a>.
+</div>
+<div id="ref-hur_neighborhood_2010" class="csl-entry">
+Hur, Misun, Jack L. Nasar, and Bumseok Chun. 2010. <span>“Neighborhood Satisfaction, Physical and Perceived Naturalness and Openness.”</span> <em>Journal of Environmental Psychology</em> 30 (1): 52–59. <a href="https://doi.org/10.1016/j.jenvp.2009.05.005">https://doi.org/10.1016/j.jenvp.2009.05.005</a>.
+</div>
+<div id="ref-jarque_test_1987" class="csl-entry">
+Jarque, Carlos M., and Anil K. Bera. 1987. <span>“A <span>Test</span> for <span>Normality</span> of <span>Observations</span> and <span>Regression</span> <span>Residuals</span>.”</span> <em>International Statistical Review / Revue Internationale de Statistique</em> 55 (2): 163–72. <a href="https://doi.org/10.2307/1403192">https://doi.org/10.2307/1403192</a>.
+</div>
+<div id="ref-mayor_of_london_2017" class="csl-entry">
+London, Mayor of. 2017. <span>“The <span>London</span> <span>Plan</span>.”</span> <em>London City Hall</em>. <a href="https://www.london.gov.uk//what-we-do/planning/london-plan/current-london-plan/london-plan-2016-pdf">https://www.london.gov.uk//what-we-do/planning/london-plan/current-london-plan/london-plan-2016-pdf</a>.
+</div>
+<div id="ref-datastore_land_2005" class="csl-entry">
+Ministry of Housing, Communities &amp; Local Government (MHCLG). 2005. <span>“Land Use by Borough and Ward.”</span> 2005. <a href="https://data.london.gov.uk/dataset/land-use-ward">https://data.london.gov.uk/dataset/land-use-ward</a>.
+</div>
+<div id="ref-mitchell_effect_2008" class="csl-entry">
+Mitchell, Richard, and Frank Popham. 2008. <span>“Effect of Exposure to Natural Environment on Health Inequalities: An Observational Population Study.”</span> <em>The Lancet</em> 372 (9650): 1655–60. <a href="https://doi.org/10.1016/S0140-6736(08)61689-X">https://doi.org/10.1016/S0140-6736(08)61689-X</a>.
+</div>
+<div id="ref-moseley_green_2013" class="csl-entry">
+Moseley, Darren, Mariella Marzano, Jordan Chetcuti, and Kevin Watts. 2013. <span>“Green Networks for People: <span>Application</span> of a Functional Approach to Support the Planning and Management of Greenspace.”</span> <em>Landscape and Urban Planning</em> 116 (August): 1–12. <a href="https://doi.org/10.1016/j.landurbplan.2013.04.004">https://doi.org/10.1016/j.landurbplan.2013.04.004</a>.
+</div>
+<div id="ref-noauthor_census_2011" class="csl-entry">
+National Statistics, Office for. 2011. <span>“2011 Census.”</span> 2011. <a href="https://data.london.gov.uk/census/">https://data.london.gov.uk/census/</a>.
+</div>
+<div id="ref-shapiro_analysis_1965" class="csl-entry">
+Shapiro, S. S., and M. B. Wilk. 1965. <span>“An <span>Analysis</span> of <span>Variance</span> <span>Test</span> for <span>Normality</span> (<span>Complete</span> <span>Samples</span>).”</span> <em>Biometrika</em> 52 (3/4): 591–611. <a href="https://doi.org/10.2307/2333709">https://doi.org/10.2307/2333709</a>.
+</div>
+<div id="ref-smith_valuing_2010" class="csl-entry">
+Smith, D. 2010. <span>“Valuing Housing and Green Spaces: Understanding Local Amenities, the Built Environment and House Prices in London.”</span>
+</div>
+<div id="ref-taylor_defining_2017" class="csl-entry">
+Taylor, Lucy, and Dieter F. Hochuli. 2017. <span>“Defining Greenspace: Multiple Uses Across Multiple Disciplines.”</span> <em>Landscape and Urban Planning</em> 158 (February): 25–38. <a href="https://doi.org/10.1016/j.landurbplan.2016.09.024">https://doi.org/10.1016/j.landurbplan.2016.09.024</a>.
+</div>
+<div id="ref-zhang_quality_2017" class="csl-entry">
+Zhang, Yang, Agnes E. Van den Berg, Terry Van Dijk, and Gerd Weitkamp. 2017. <span>“Quality over <span>Quantity</span>: <span>Contribution</span> of <span>Urban</span> <span>Green</span> <span>Space</span> to <span>Neighborhood</span> <span>Satisfaction</span>.”</span> <em>International Journal of Environmental Research and Public Health</em> 14 (5): 535. <a href="https://doi.org/10.3390/ijerph14050535">https://doi.org/10.3390/ijerph14050535</a>.
+</div>
+<div id="ref-zhou_social_2012" class="csl-entry">
+Zhou, Xiaolu, and Masud Parves Rana. 2012. <span>“Social Benefits of Urban Green Space : <span>A</span> Conceptual Framework of Valuation and Accessibility Measurements.”</span> <em>Management of Environmental Quality: An International Journal</em> 23 (2): 173–89. <a href="https://doi.org/10.1108/14777831211204921">https://doi.org/10.1108/14777831211204921</a>.
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="appendix.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["group_5_report_bookdown.pdf", "group_5_report_bookdown.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

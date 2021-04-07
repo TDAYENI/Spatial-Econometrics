@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Results | Modelling correlation between access to green space and demographic and health variables in London.</title>
+  <meta name="description" content="Chapter 5 Results | Modelling correlation between access to green space and demographic and health variables in London." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Results | Modelling correlation between access to green space and demographic and health variables in London." />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Results | Modelling correlation between access to green space and demographic and health variables in London." />
+  
+  
+  
+
+<meta name="author" content="Titilayo Ayeni, Shenzhangyin Yang, Niamh French, James Edwards" />
+
+
+<meta name="date" content="2021-01-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="methodology.html"/>
+<link rel="next" href="discussion-and-conclusions.html"/>
+<script src="libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+CEGE0097 Group Coursework
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="data-description.html"><a href="data-description.html"><i class="fa fa-check"></i><b>2</b> Data Description</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="data-description.html"><a href="data-description.html#green-space-data"><i class="fa fa-check"></i><b>2.1</b> Green Space Data</a></li>
+<li class="chapter" data-level="2.2" data-path="data-description.html"><a href="data-description.html#demographic-data"><i class="fa fa-check"></i><b>2.2</b> Demographic Data</a></li>
+<li class="chapter" data-level="2.3" data-path="data-description.html"><a href="data-description.html#data-multicollinearity"><i class="fa fa-check"></i><b>2.3</b> Data Multicollinearity</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html"><i class="fa fa-check"></i><b>3</b> Exploratory Spatial Data Analysis</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#london-greenspace-distribution"><i class="fa fa-check"></i><b>3.1</b> London Greenspace distribution</a></li>
+<li class="chapter" data-level="3.2" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#demographic-distribution-across-london"><i class="fa fa-check"></i><b>3.2</b> Demographic distribution across London</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#income"><i class="fa fa-check"></i><b>3.2.1</b> Income</a></li>
+<li class="chapter" data-level="3.2.2" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#age"><i class="fa fa-check"></i><b>3.2.2</b> Age</a></li>
+<li class="chapter" data-level="3.2.3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#life-expectancy"><i class="fa fa-check"></i><b>3.2.3</b> Life Expectancy</a></li>
+<li class="chapter" data-level="3.2.4" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#ethnicity"><i class="fa fa-check"></i><b>3.2.4</b> Ethnicity</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#spatial-autocorrelation"><i class="fa fa-check"></i><b>3.3</b> Spatial Autocorrelation</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#global-morans-i"><i class="fa fa-check"></i><b>3.3.1</b> Global Moran’s I</a></li>
+<li class="chapter" data-level="3.3.2" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#local-morans-i"><i class="fa fa-check"></i><b>3.3.2</b> Local Moran’s I</a></li>
+<li class="chapter" data-level="3.3.3" data-path="exploratory-spatial-data-analysis.html"><a href="exploratory-spatial-data-analysis.html#semivariogram"><i class="fa fa-check"></i><b>3.3.3</b> Semivariogram</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="methodology.html"><a href="methodology.html"><i class="fa fa-check"></i><b>4</b> Methodology</a></li>
+<li class="chapter" data-level="5" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>5</b> Results</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="results.html"><a href="results.html#ols"><i class="fa fa-check"></i><b>5.1</b> OLS</a></li>
+<li class="chapter" data-level="5.2" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.2</b> Shapiro-Wilk Normality Test</a></li>
+<li class="chapter" data-level="5.3" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.3</b> Moran’s I on OLS residuals</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="results.html"><a href="results.html#south"><i class="fa fa-check"></i><b>5.3.1</b> South</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="results.html"><a href="results.html#lagrange-multiplier-tests"><i class="fa fa-check"></i><b>5.4</b> Lagrange Multiplier Tests</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="results.html"><a href="results.html#london"><i class="fa fa-check"></i><b>5.4.1</b> London</a></li>
+<li class="chapter" data-level="5.4.2" data-path="results.html"><a href="results.html#north"><i class="fa fa-check"></i><b>5.4.2</b> North</a></li>
+<li class="chapter" data-level="5.4.3" data-path="results.html"><a href="results.html#east-and-west"><i class="fa fa-check"></i><b>5.4.3</b> East and West</a></li>
+<li class="chapter" data-level="5.4.4" data-path="results.html"><a href="results.html#south-1"><i class="fa fa-check"></i><b>5.4.4</b> South</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5</b> Spatial Regression Models</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.1</b> Spatial Lag Model</a></li>
+<li class="chapter" data-level="5.5.2" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.2</b> Spatial Error Model</a></li>
+<li class="chapter" data-level="5.5.3" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.3</b> Spatial Durbin</a></li>
+<li class="chapter" data-level="5.5.4" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.4</b> GWR</a></li>
+<li class="chapter" data-level="5.5.5" data-path="results.html"><a href="results.html#css_id"><i class="fa fa-check"></i><b>5.5.5</b> OLS and Spatial Filtering</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html"><i class="fa fa-check"></i><b>6</b> Discussion and Conclusions</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#model-selection"><i class="fa fa-check"></i><b>6.1</b> Model Selection</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#greater-london"><i class="fa fa-check"></i><b>6.1.1</b> Greater London</a></li>
+<li class="chapter" data-level="6.1.2" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#north-london"><i class="fa fa-check"></i><b>6.1.2</b> North London</a></li>
+<li class="chapter" data-level="6.1.3" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#east-london"><i class="fa fa-check"></i><b>6.1.3</b> East London</a></li>
+<li class="chapter" data-level="6.1.4" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#west-london"><i class="fa fa-check"></i><b>6.1.4</b> West London</a></li>
+<li class="chapter" data-level="6.1.5" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#south-london"><i class="fa fa-check"></i><b>6.1.5</b> South London</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="discussion-and-conclusions.html"><a href="discussion-and-conclusions.html#limitations-and-future-work"><i class="fa fa-check"></i><b>6.2</b> Limitations and future work</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i><b>7</b> Appendix</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="appendix.html"><a href="appendix.html#ordinary-least-squares-ols-results"><i class="fa fa-check"></i><b>7.1</b> Ordinary Least Squares (OLS) Results</a></li>
+<li class="chapter" data-level="7.2" data-path="appendix.html"><a href="appendix.html#spatial-lag-results"><i class="fa fa-check"></i><b>7.2</b> Spatial Lag Results</a></li>
+<li class="chapter" data-level="7.3" data-path="appendix.html"><a href="appendix.html#spatial-error-results"><i class="fa fa-check"></i><b>7.3</b> Spatial Error Results</a></li>
+<li class="chapter" data-level="7.4" data-path="appendix.html"><a href="appendix.html#spatial-durbin-results"><i class="fa fa-check"></i><b>7.4</b> Spatial Durbin Results</a></li>
+<li class="chapter" data-level="7.5" data-path="appendix.html"><a href="appendix.html#geographically-weighted-regression-results"><i class="fa fa-check"></i><b>7.5</b> Geographically Weighted Regression Results</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="appendix.html"><a href="appendix.html#shapiro-wilk-normality-tests-before-normalisation"><i class="fa fa-check"></i><b>7.5.1</b> Shapiro-Wilk Normality Tests before normalisation</a></li>
+<li class="chapter" data-level="7.5.2" data-path="appendix.html"><a href="appendix.html#shapiro-wilk-normality-test-after-normalisation"><i class="fa fa-check"></i><b>7.5.2</b> Shapiro-Wilk Normality Test after normalisation</a></li>
+<li class="chapter" data-level="7.5.3" data-path="appendix.html"><a href="appendix.html#shapiro-wlike-normality-test-for-ols-residuals"><i class="fa fa-check"></i><b>7.5.3</b> Shapiro-Wlike Normality Test for OLS Residuals</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="appendix.html"><a href="appendix.html#ols-with-spatial-filtering-results"><i class="fa fa-check"></i><b>7.6</b> OLS with Spatial Filtering Results</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="appendix.html"><a href="appendix.html#lagrange-multiplier-diagnostics-for-spatial-dependence"><i class="fa fa-check"></i><b>7.6.1</b> Lagrange Multiplier Diagnostics for Spatial Dependence</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>8</b> References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Modelling correlation between access to green space and demographic and health variables in London.</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="results" class="section level1" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Results</h1>
+<style type="text/css">
+pre {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+pre[class] {
+  max-height: 100px;
+}
+</style>
+<p>Base Formula:
+<span class="math display">\[\large ln (g + 12) = age +  le + ln(income) \\
+\large + ln(ap/tp) + ln(bp/tp) + (mp/tp) + ln(op/tp)\]</span></p>
+<p><span class="math inline">\(\Large g\)</span> = % green space in ward<br />
+<span class="math inline">\(\Large age\)</span> = mean age in ward<br />
+<span class="math inline">\(\Large le\)</span> = life expectancy in ward<br />
+<span class="math inline">\(\Large income\)</span> = mean income in ward<br />
+<span class="math inline">\(\Large tp\)</span> = total population in ward<br />
+<span class="math inline">\(\Large ap\)</span> = asian population in ward<br />
+<span class="math inline">\(\Large bp\)</span> = black population in ward<br />
+<span class="math inline">\(\Large mp\)</span> = mixed ethnicity population in ward<br />
+<span class="math inline">\(\Large op\)</span> = population in ward of ethnicities other than white or those previously stated</p>
+<p>Spatial Durbin, Error and Lag models for each respective study area used the same base formula, predictive variable, dependent variable, and spatial weight matrix (first-order queen criterion) as above. The wards immediately adjacent were considered neighbours whether they touched the corners or the flat edge of a ward’s polygon. An identical strategy was used in the GWR model though varied by selecting a relevant bandwidth for the isotropic Gaussian Kernel. In this study, when a result is deemed statistically significant, it will refer to a p-values ≥0.05, correspondingly &lt;0.05 is not significant.</p>
+<div id="ols" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> OLS</h2>
+<p>The Ordinary Least Squares (OLS) models fitted to each region were significant (at the 95% level) and returned an adjusted R<sup>2</sup> 0.1052-0.2722, West London returning the highest result. The OLS models only explained 10-27% of the green space variation for each location. Combined with the High Residual Standard Error (RSE) 0.3804 – 0.4365, it can be concluded that OLS was a poor fit for modelling green space both in the subdivisions and the whole of London. This can be observed in the large difference between the actual value of green space and the predicted value.</p>
+<p>Figures <a href="results.html#fig:qq-north-east">5.2</a>, <a href="results.html#fig:qq-south-west">5.3</a> and <a href="results.html#fig:qq-london">5.1</a> display the Q-Q plots for all datasets. All plots showed that points were above the theoretical normal line at the lower values near the beginning and below the line near the end. The plots exhibited a thin-tailed distribution; deviation at the ends was considered negligible. Consequently, the datasets were considered close to normal distribution: the Shapiro-Wilk test provided further evidence of normality.</p>
+<div class="figure"><span id="fig:qq-london"></span>
+<img src="group_5_report_bookdown_files/figure-html/qq-london-1.png" alt="Q-Q plot of linear model residuals, Greater London" width="672" />
+<p class="caption">
+Figure 5.1: Q-Q plot of linear model residuals, Greater London
+</p>
+</div>
+<div class="figure"><span id="fig:qq-north-east"></span>
+<img src="group_5_report_bookdown_files/figure-html/qq-north-east-1.png" alt="Q-Q plot of linear model residuals, North London and East London" width="672" />
+<p class="caption">
+Figure 5.2: Q-Q plot of linear model residuals, North London and East London
+</p>
+</div>
+<div class="figure"><span id="fig:qq-south-west"></span>
+<img src="group_5_report_bookdown_files/figure-html/qq-south-west-1.png" alt="Q-Q plot of linear model residuals, South London and West London" width="672" />
+<p class="caption">
+Figure 5.3: Q-Q plot of linear model residuals, South London and West London
+</p>
+</div>
+</div>
+<div id="css_id" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Shapiro-Wilk Normality Test</h2>
+<p>The Shapiro-Wilk (<span class="citation"><a href="references.html#ref-shapiro_analysis_1965" role="doc-biblioref">Shapiro and Wilk</a> (<a href="references.html#ref-shapiro_analysis_1965" role="doc-biblioref">1965</a>)</span>) results for the OLS residuals for North, East and South areas were not significant at a 95% confidence level (p-value &gt; 0.05) and had a high W value. Thus, the null hypothesis of a normal distribution was not rejected, and normality in the residuals was assumed. Conversely, London as a whole and the West were weakly significant at a p-value of 0.02431 and 0.00907. For this study these values were deemed acceptable enough for the assumption of normality. Similarly, the natural logarithm transformation and addition of 12 to the dependent variable showed a significant increase in assumed normality.</p>
+</div>
+<div id="css_id" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Moran’s I on OLS residuals</h2>
+<p>The Global Moran’s I test results on the OLS residuals detected statistically significant and positive spatial autocorrelation; similar green space values were clustered together in all areas apart from the South (Table <a href="results.html#tab:Morans-I-table">5.1</a>). The whole of London and the West had the largest Moran’s I of 0.171590363 and 0.177676307 and a p-value 5.826E-15 and 2.65E-06. The results stated that, with the exception of the South, the null hypothesis of spatial randomness could be rejected with confidence. The results also suggested that the unaccounted spatial autocorrelation in the OLS residuals was a key factor causing the high RSE and low R<sup>2</sup> value.</p>
+<table class="table table-striped table-hover" style="font-size: 12px; ">
+<caption style="font-size: initial !important;">
+<span id="tab:Morans-I-table">Table 5.1: </span> Global Moran I for Regression Residuals
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+London
+</th>
+<th style="text-align:left;">
+North
+</th>
+<th style="text-align:left;">
+East
+</th>
+<th style="text-align:left;">
+West
+</th>
+<th style="text-align:left;">
+South
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+Observed Moran’s I
+</td>
+<td style="text-align:left;">
+0.1715903627
+</td>
+<td style="text-align:left;">
+0.087117028
+</td>
+<td style="text-align:left;">
+0.108292348
+</td>
+<td style="text-align:left;">
+0.177676307
+</td>
+<td style="text-align:left;">
+-0.03053761
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+Expectation
+</td>
+<td style="text-align:left;">
+-0.0083988916
+</td>
+<td style="text-align:left;">
+-0.0352447
+</td>
+<td style="text-align:left;">
+-0.025650785
+</td>
+<td style="text-align:left;">
+-0.030140504
+</td>
+<td style="text-align:left;">
+-0.03025517
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+p-value
+</td>
+<td style="text-align:left;">
+5.826E-15
+</td>
+<td style="text-align:left;">
+0.007698
+</td>
+<td style="text-align:left;">
+0.001336
+</td>
+<td style="text-align:left;">
+2.65E-06
+</td>
+<td style="text-align:left;">
+0.5023
+</td>
+</tr>
+</tbody>
+</table>
+<div id="south" class="section level3" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> South</h3>
+<p>Contrary to all other results, the South had a negative observed Moran’s I -0.03053761 nearly identical to the expectation value of -0.03025517: the value if no spatial autocorrelation was present. The Moran’s I value when combined with the statistical insignificance, indicated that there was not enough evidence to suggest that spatial autocorrelation was present. The fitting of a spatial regression model would not improve the prediction of green space, therefore, despite its limitations, the OLS model was concluded to be the best fit available for South London.</p>
+</div>
+</div>
+<div id="lagrange-multiplier-tests" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Lagrange Multiplier Tests</h2>
+<p>Table <a href="results.html#tab:Lagrange-Multiplier">5.2</a> shows all the Lagrange Multiplier test results.</p>
+<table class="table table-striped table-hover" style="font-size: 12px; ">
+<caption style="font-size: initial !important;">
+<span id="tab:Lagrange-Multiplier">Table 5.2: </span>Lagrange Multiplier Diagnostics for Spatial Dependence
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+London
+</th>
+<th style="text-align:left;">
+North
+</th>
+<th style="text-align:left;">
+East
+</th>
+<th style="text-align:left;">
+West
+</th>
+<th style="text-align:left;">
+South
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+LMlag
+</td>
+<td style="text-align:left;">
+56.262
+</td>
+<td style="text-align:left;">
+7.5719
+</td>
+<td style="text-align:left;">
+7.2718
+</td>
+<td style="text-align:left;">
+1.85E+01
+</td>
+<td style="text-align:left;">
+0.96829
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+p-value (LMlag)
+</td>
+<td style="text-align:left;">
+6.34E-14
+</td>
+<td style="text-align:left;">
+0.005928
+</td>
+<td style="text-align:left;">
+0.007005
+</td>
+<td style="text-align:left;">
+1.73E-05
+</td>
+<td style="text-align:left;">
+0.3251
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+LMerr
+</td>
+<td style="text-align:left;">
+52.139
+</td>
+<td style="text-align:left;">
+2.5679
+</td>
+<td style="text-align:left;">
+5.2787
+</td>
+<td style="text-align:left;">
+13.204
+</td>
+<td style="text-align:left;">
+0.36006
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+p-value (LMerr)
+</td>
+<td style="text-align:left;">
+5.17E-13
+</td>
+<td style="text-align:left;">
+0.1091
+</td>
+<td style="text-align:left;">
+0.02159
+</td>
+<td style="text-align:left;">
+0.0002793
+</td>
+<td style="text-align:left;">
+0.5485
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+RLMlag
+</td>
+<td style="text-align:left;">
+4.1866
+</td>
+<td style="text-align:left;">
+11.009
+</td>
+<td style="text-align:left;">
+3.1031
+</td>
+<td style="text-align:left;">
+6.2264
+</td>
+<td style="text-align:left;">
+2.7989
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:left;">
+p-value (RLMlag)
+</td>
+<td style="text-align:left;">
+0.04074
+</td>
+<td style="text-align:left;">
+0.0009069
+</td>
+<td style="text-align:left;">
+0.07814
+</td>
+<td style="text-align:left;">
+0.01259
+</td>
+<td style="text-align:left;">
+0.09433
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+7
+</td>
+<td style="text-align:left;">
+RLMerr
+</td>
+<td style="text-align:left;">
+0.063807
+</td>
+<td style="text-align:left;">
+6.0046
+</td>
+<td style="text-align:left;">
+1.11
+</td>
+<td style="text-align:left;">
+0.96381
+</td>
+<td style="text-align:left;">
+2.1907
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+8
+</td>
+<td style="text-align:left;">
+p-value (RLMerr)
+</td>
+<td style="text-align:left;">
+0.8006
+</td>
+<td style="text-align:left;">
+0.01427
+</td>
+<td style="text-align:left;">
+0.2921
+</td>
+<td style="text-align:left;">
+0.3262
+</td>
+<td style="text-align:left;">
+0.1388
+</td>
+</tr>
+</tbody>
+</table>
+<div id="london" class="section level3" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> London</h3>
+<p>For London as a whole the LMerr and LMlag values were high, 56.262 and 52.139, and significant at a 95% confidence. However, the robust test indicated a Spatial Lag model should be fitted as the RLMerr was low and insignificant.</p>
+</div>
+<div id="north" class="section level3" number="5.4.2">
+<h3><span class="header-section-number">5.4.2</span> North</h3>
+<p>Likewise, for the North, the results indicated that a Spatial Lag model would best fit the data. The LMlag value was significant, whereas the LMerr was not, the robust test produced similar results.</p>
+</div>
+<div id="east-and-west" class="section level3" number="5.4.3">
+<h3><span class="header-section-number">5.4.3</span> East and West</h3>
+<p>The East and West demonstrated statistical significance for both regular LM tests. However, the robust test for RLMerr values was lower than LMlag and not significant for the West, signifying that a Spatial Lag model should be fitted. In contrast, both robust LM tests for the East had a p-value &gt; 0.05; both Error and Lag would be run.</p>
+</div>
+<div id="south-1" class="section level3" number="5.4.4">
+<h3><span class="header-section-number">5.4.4</span> South</h3>
+<p>Both LM tests was insignificant for South London, this was expected considering the Moran’s I result concluded that there was not enough statistical evidence to stipulate the presence of autocorrelation.</p>
+</div>
+</div>
+<div id="css_id" class="section level2" number="5.5">
+<h2><span class="header-section-number">5.5</span> Spatial Regression Models</h2>
+<p>The LM test and Global Moran’s I guided the procedure for model testing and selection. Even with this guidance, all models for each study area and dataset were run to provide supporting evidence for model selection and highlight a model’s unsuitability.</p>
+<div id="css_id" class="section level3" number="5.5.1">
+<h3><span class="header-section-number">5.5.1</span> Spatial Lag Model</h3>
+<p>The Spatial Lag model’s Rho value ranged from 0.29468-0.45669 with significant p-values for London, North, East and West. The results imply that there was a lagged relationship between green space values in neighbouring wards. The spatial autocorrelation detected in the Moran’s I was modelled out for all three locations; the p-value exceeded the 0.05 threshold. Therefore, the null hypothesis of spatial randomness could not be rejected.</p>
+<p>Compared to the OLS, the AIC of the Lag model demonstrated a distinct decrease, across all study regions: the whole of London showed the most considerable change 695.5 to 648.57. The reduction signified the model’s better fit for predicting green space values. The Rho and residual autocorrelation test’s lack of statistical significance in the South was reflected in the increased AIC, from 159.21 to 160.9, this was interpreted as the worst fit.</p>
+</div>
+<div id="css_id" class="section level3" number="5.5.2">
+<h3><span class="header-section-number">5.5.2</span> Spatial Error Model</h3>
+<p>The LM test results suggest that only the East dataset be modelled with the Spatial Error; despite this, all datasets were passed through each model and tested to allow for complete comparison. The Spatial Lag’s unique coefficient, lambda, had a high value and was statistically significant in all regions apart from the North and South; which highlighted potential clustering in the residuals. Nevertheless, the log-likelihood was more negative; also the AIC was higher than the Spatial Lag results. The Akaike Information Criteria rule of thumb states that if the AIC value of models falls within two or less, they have the same explanatory power <span class="citation">(<a href="references.html#ref-fabozzi_basics_2014" role="doc-biblioref">Fabozzi et al. 2014</a>)</span>. None of the Spatial Errors results fell within the parameter; for that reason, the model was deemed a less adequate fit relative than the Lag.</p>
+</div>
+<div id="css_id" class="section level3" number="5.5.3">
+<h3><span class="header-section-number">5.5.3</span> Spatial Durbin</h3>
+<p>The Rho values for the Durbin model in the North was not significant at a 95% confidence level. The reduced AIC and less negative Log-likelihood for the London dataset provided evidence that Durbin model would be a better fit than the Lag. The AIC of the East had a difference greater than two in comparison to the Lag; therefore, the model was interpreted as weaker in explaining power. Across all study areas, spatial autocorrelation had been modelled out similar to the Lag. In the results for the West, conflict arose between the Log-likelihood and AIC value between the Durbin and Lag model. Durbin had a greater AIC 143.31 and less negative log-likelihood -54.65 compared to 137.71 and -58.85 of the Lag. Despite the contradiction, Lag was interpreted as the best fit, based on the principle that AIC was used as the primary model selection parameter. When similar conflicts arose throughout the study, the same approach was taken.</p>
+</div>
+<div id="css_id" class="section level3" number="5.5.4">
+<h3><span class="header-section-number">5.5.4</span> GWR</h3>
+<p>The spatial autocorrelation evident in the OLS model’s residuals was reduced in all study areas in which the GWR model was run, though not wholly modelled out. Excluding the South, the observed Moran’s I ranged 0.087117-0.177676 (OLS residuals) compared to 0.0175191-0.08093797 (GWR) all with an associated p-value &lt; 0.05. In accordance with the reduction in observed spatial autocorrelation, the AIC for all study regions was considerably lower for GWR than the OLS, Lag, Durbin and Error models. The R<sup>2</sup> value significantly increased across all areas when compared to the OLS.</p>
+</div>
+<div id="css_id" class="section level3" number="5.5.5">
+<h3><span class="header-section-number">5.5.5</span> OLS and Spatial Filtering</h3>
+<p>The OLS model is nested within the OLS and Spatial Filtering model, hence comparison of their results represents the direct impact of Spatial Filtering function upon the model’s strength .Apart from the South, every study area observed a noticeable decrease in RSE 0.3804-0.4365 to 0.3218-0.4047 compared to the initial OLS results. The adjusted R<sup>2</sup> rose considerably from 0.1286-0.2722 to 0.2922-0.4791.</p>
+<p>The transition of the results demonstrated how each model’s predictive power increases with spatial autocorrelation being modelled out; the Global Moran’s I was statistically insignificant in each study area. Across London, East, West and North the AIC was the smallest when compared to the OLS, Lag, Durbin and Error models. However, in all areas apart from Greater London GWR had a lower AIC. There was a difference in AIC value less than one for Greater London. According to Akaike Information Criteria rule of thumb, the minor difference indicates that the two models have the same explanatory power <span class="citation">(<a href="references.html#ref-fabozzi_basics_2014" role="doc-biblioref">Fabozzi et al. 2014</a>)</span>.</p>
+<p>The full list of AIC values for each model is displayed in Table <a href="results.html#tab:AIC">5.3</a>. The GWR model for all areas, including the South, had the smallest AIC value overall. This was closely followed by OLS and Spatial Filtering, then the Lag model. Despite the lower GWR AIC avlue, OLS with Spatial Filtering was concluded to be the best fit in all areas except the South. This is due to the limitations of the GWR, most notably the inability of GWR to remove spatial autocorrelation in residuals. The OLS with Spatial Filtering model was the only model to fully remove spatial autocoreelaiton in residuals. Excluding the North and South, the Durbin model for the other locations had the fourth-highest AIC. All results, not including the South, indicated Error being the second least powerful spatial regression model. Finally, the OLS was the model deemed weakest at providing accurate predictive greenspace values.</p>
+<p>Full results for all models are available in the Appendix.</p>
+<table class="table table-striped table-hover" style="font-size: 12px; ">
+<caption style="font-size: initial !important;">
+<span id="tab:AIC">Table 5.3: </span> AIC Results
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+London
+</th>
+<th style="text-align:left;">
+North
+</th>
+<th style="text-align:left;">
+East
+</th>
+<th style="text-align:left;">
+West
+</th>
+<th style="text-align:left;">
+South
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+Number of Observations:
+</td>
+<td style="text-align:left;">
+625
+</td>
+<td style="text-align:left;">
+135
+</td>
+<td style="text-align:left;">
+173
+</td>
+<td style="text-align:left;">
+159
+</td>
+<td style="text-align:left;">
+158
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+OLS
+</td>
+<td style="text-align:left;">
+695.9519
+</td>
+<td style="text-align:left;">
+134.9908
+</td>
+<td style="text-align:left;">
+213.9736
+</td>
+<td style="text-align:left;">
+153.6169
+</td>
+<td style="text-align:left;">
+159.2142
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+Error
+</td>
+<td style="text-align:left;">
+650.3795
+</td>
+<td style="text-align:left;">
+133.7242
+</td>
+<td style="text-align:left;">
+210.6101
+</td>
+<td style="text-align:left;">
+141.3932
+</td>
+<td style="text-align:left;">
+160.7782
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+Lag
+</td>
+<td style="text-align:left;">
+648.5731
+</td>
+<td style="text-align:left;">
+129.6145
+</td>
+<td style="text-align:left;">
+208.956
+</td>
+<td style="text-align:left;">
+137.711
+</td>
+<td style="text-align:left;">
+160.0925
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+Durbin
+</td>
+<td style="text-align:left;">
+639.2799
+</td>
+<td style="text-align:left;">
+131.1229
+</td>
+<td style="text-align:left;">
+213.5265
+</td>
+<td style="text-align:left;">
+143.3125
+</td>
+<td style="text-align:left;">
+165.3068
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:left;">
+GWR
+</td>
+<td style="text-align:left;">
+564.501
+</td>
+<td style="text-align:left;">
+98.46093
+</td>
+<td style="text-align:left;">
+196.742
+</td>
+<td style="text-align:left;">
+93.19053
+</td>
+<td style="text-align:left;">
+144.7065
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+7
+</td>
+<td style="text-align:left;">
+OLS and Spatial Filtering
+</td>
+<td style="text-align:left;">
+564.4889
+</td>
+<td style="text-align:left;">
+118.6283
+</td>
+<td style="text-align:left;">
+192.471
+</td>
+<td style="text-align:left;">
+110.4278
+</td>
+<td style="text-align:left;">
+159.4238
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="methodology.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="discussion-and-conclusions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["group_5_report_bookdown.pdf", "group_5_report_bookdown.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
